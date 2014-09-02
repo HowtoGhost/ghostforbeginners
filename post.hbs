@@ -1,0 +1,78 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+<main class="content" role="main">
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav side-nav">
+            <li class="active"><a href="/#getting-started">Getting Started</a></li>
+            <li><a href="/#post-basics">Post Basics</a></li>
+            <li><a href="/#multi-user">Managing Ghost Users</a></li>
+            <li><a href="/#migrating-to-ghost">Migrate to Ghost</a></li>
+            <li><a href="/#finding-and-uploading-a-theme">Find/Upload Theme</a></li>
+            <li><a href="/#backing-up-ghost">Backing Up Ghost</a></li>
+            <li><a href="/#further-blog-customizations">Blog Customizations</a></li>
+            <li><a href="/#theme-basics">Theme Basics</a></li>
+            <li><a href="/#example-theme-changes">Example Theme Changes</a></li>
+            <li><a href="/#more-information">More Information</a></li>
+            <li><a href="/#extras">Extras</a></li>
+        </ul>
+    </div>
+    <br style="clear:both">
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-538bfb5b653004cb"></script>
+    <div class="addthis_sharing_toolbox"></div>
+
+    <!-- Begin MailChimp Signup Form -->
+    <div id="optin">
+        <form action="//howtoinstallghost.us8.list-manage.com/subscribe/post?u=c81a49b02c06fda2b441f0d8a&amp;id=d399a3db32" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <h4>Get Email Updates</h4>
+            <div class="optin-text">Get updates on our upcoming book and other Ghost information!</div>
+            <input type="text" size="30" value="Enter your name" name="FNAME" class="name" id="mce-FNAME" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
+            <input type="email" size="30" value="Enter your email" name="EMAIL" class="required email" id="mce-EMAIL" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
+            <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_c81a49b02c06fda2b441f0d8a_703eafc617" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+        </form>
+    </div>
+
+    <!--End mc_embed_signup-->
+
+    <article class="{{post_class}}">
+
+        {{! Everything inside the #post tags pulls data from the post }}
+
+        {{#post}}
+
+            <h1 class="post-title">{{{title}}}</h1>
+            <hr class="post-title-hr">
+
+            <div class="post-content">
+                {{content}}
+            </div>
+            <div id="discourse-comments"></div>
+
+             <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                    var disqus_shortname = 'ghostforbeginners'; // required: replace example with your forum shortname
+
+                    /* * * DON'T EDIT BELOW THIS LINE * * */
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                });
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>    
+
+        {{/post}}
+
+    </article>
+
+</main>
