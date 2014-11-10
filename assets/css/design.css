@@ -43,8 +43,8 @@ html, body {
 .nav li a:hover {color:black;}
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {color:white;}
 
-#twitter-menu {height:50px;}
-#twitter-menu a {padding-top:13px;padding-bottom:13px;}
+#twitter-menu, #facebook-menu {height:50px;}
+#twitter-menu a, #facebook-menu a {padding-top:13px;padding-bottom:13px;padding-right:7.5px;padding-left:7.5px;}
 #twitter-menu a img, #facebook-menu a img {width:30px;height:24px;}
 
 .side-nav {
