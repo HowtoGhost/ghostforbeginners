@@ -45,7 +45,7 @@ html, body {
 
 #twitter-menu {height:50px;}
 #twitter-menu a {padding-top:13px;padding-bottom:13px;}
-#twitter-menu a img {width:30px;}
+#twitter-menu a img, #facebook-menu a img {width:30px;height:24px;}
 
 .side-nav {
 	right:0;
