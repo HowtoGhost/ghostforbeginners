@@ -1,17 +1,23 @@
-{{!< default}}
+ {{!< default}}
+
 <main class="content" role="main">
 
-    {{> "sidebar"}}
+    <div class="wrapper">
+        <div id="content" class="col-md-9">
+            <h1>Sorry, we cannot find what you are looking for.</h1>
+            <p>Sorry about that! Please head to the <a href="/">home page</a> to see our lists of post, or check out some of our most popular ones below to help find what you are looking for</p>
+            <ul>
+                <li class="error-page-posts"><a href="/how-to-add-a-menu-to-your-ghost-blog">How to Add a Menu to Your Ghost Blog</a></li>
+                <li class="error-page-posts"><a href="/best-free-ghost-themes">Best Free Ghost Themes</li>
+                <li class="error-page-posts"><a href="/how-to-add-an-image-to-your-ghost-blog-post">How to Add an Image to Your Ghost Blog</a></li>
+                <li class="error-page-posts"><a href="/how-to-publish-a-page-on-your-ghost-blog">How to Publish a Static Page</a></li>
+                <li class="error-page-posts"><a href="/how-to-enable-comments-on-a-ghost-blog">How to Enable Comments on Ghost</a></li>
+            </ul>
+        </div>
+        
+        {{> "sidebar"}}
 
-    <div class="error-page">
-    	<h1>Sorry, we cannot find what you are looking for.</h1>
-    	<p>Sorry about that! Please head to the <a href="/">home page</a> to see our lists of post, or check out some of our most popular ones below to help find what you are looking for</p>
-    	<ul>
-    		<li class="error-page-posts"><a href="/how-to-add-a-menu-to-your-ghost-blog">How to Add a Menu to Your Ghost Blog</a></li>
-    		<li class="error-page-posts"><a href="/best-free-ghost-themes">Best Free Ghost Themes</li>
-    		<li class="error-page-posts"><a href="/how-to-add-an-image-to-your-ghost-blog-post">How to Add an Image to Your Ghost Blog</a></li>
-    		<li class="error-page-posts"><a href="/how-to-publish-a-page-on-your-ghost-blog">How to Publish a Static Page</a></li>
-    		<li class="error-page-posts"><a href="/how-to-enable-comments-on-a-ghost-blog">How to Enable Comments on Ghost</a></li>
+        <div style="clear:both;"></div>
     </div>
 
 </main>
