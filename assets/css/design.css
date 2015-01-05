@@ -31,7 +31,7 @@ html, body {
 .blog-description {font-family:"Open Sans",sans-serif;font-size:20px;/* text-shadow: 1px 1px 1px #7b7b7b; */}
 
 /*Navigation Bar*/
-.navbar {background-color: #494949 !important;margin-bottom: 0 !important;border:none;}
+.nav-top, .nav-blog-name {background-color: #494949 !important;margin-bottom: 0 !important;border:none;}
 .navbar-default .navbar-nav {font-weight: 300;font-family: 'Open Sans', sans-serif;}
 .navbar-default .navbar-nav > li > a {color:white;}
 .navbar-brand {font-weight: 300;margin-bottom: 0;font-size:24px;}
@@ -53,6 +53,8 @@ html, body {
     margin-top: 10px;
     background-color: #2f8cde;
     border-radius: 25px;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .sidebar-content li {
@@ -95,6 +97,8 @@ html, body {
 
 #sidebar-book {
 	text-align: center;
+	padding: 0 15px 20px 15px;
+
 }
 
 #sidebar-book a {
@@ -314,9 +318,15 @@ html, body {
 }
 
 @media only screen and (max-width: 768px) {
-	#sidebar-content {
+	#sidebar {
 		width: 80%;
 		margin: auto;
+	}
+
+	.side-nav {
+		width: 100%;
+		text-align: center;
+		font-size: 1.5em;
 	}
 }
 
