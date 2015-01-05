@@ -118,6 +118,22 @@ html, body {
 	color: white;
 }
 
+#book-image-container {
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.book-image {
+	width: 100%;
+}
+
+#book-amazon-image {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
 /*Index*/
 
 .main-sections {position:relative;font-family:"Open Sans",sans-serif;}
