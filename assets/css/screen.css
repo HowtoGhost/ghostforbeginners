@@ -1027,11 +1027,12 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 @media only screen and (max-width: 768px) {
+    
     article.post {
         margin: 0 2.5%;
         max-width: none;
     }
-    .addthis_sharing_toolbox {
+    .sidebar {
         display:none;
     }
 }
