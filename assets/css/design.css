@@ -241,6 +241,12 @@ html, body {
 
 .github-link {
 	text-align: center;
+	padding-bottom: 15px;
+}
+
+.github-link a {
+	padding: 5px;
+	border: 1px solid black;
 }
 
 /*Email List*/
