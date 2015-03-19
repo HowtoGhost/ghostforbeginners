@@ -239,6 +239,10 @@ html, body {
 .addthis_sharing_toolbox {position:absolute;right:0;top:950px;width:200px;}
 .at-share-tbx-element .at-share-btn {margin: 0 4px;}
 
+.github-link {
+	text-align: center;
+}
+
 /*Email List*/
 
 .large-button {
