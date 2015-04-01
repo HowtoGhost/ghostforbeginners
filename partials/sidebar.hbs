@@ -1,20 +1,11 @@
 <div id="sidebar" class="col-md-3">
 
-    <div class="navbar navbar-default sidebar-content">
+    {{!-- <div class="navbar navbar-default sidebar-content">
         <ul class="nav navbar-nav side-nav">
-            <li id="side-nav-top"><a href="/#getting-started">Getting Started</a></li>
-            <li><a href="/#post-basics">Post Basics</a></li>
-            <li><a href="/#multi-user">Managing Ghost Users</a></li>
-            <li><a href="/#migrating-to-ghost">Migrate to Ghost</a></li>
-            <li><a href="/#finding-and-uploading-a-theme">Find/Upload Theme</a></li>
-            <li><a href="/#backing-up-ghost">Backing Up Ghost</a></li>
-            <li><a href="/#further-blog-customizations">Blog Customizations</a></li>
-            <li><a href="/#theme-basics">Theme Basics</a></li>
-            <li><a href="/#example-theme-changes">Example Theme Changes</a></li>
-            <li><a href="/#more-information">More Information</a></li>
-            <li id="side-nav-bottom"><a href="/#extras">Extras</a></li>
+            <li id="side-nav-top"><a href="/#getting-started">Ghost Basics</a></li>
+            <li id="side-nav-bottom"><a href="/theming">Theming Ghost</a></li>
         </ul>
-    </div>
+    </div> --}}
 
     <div id="sidebar-book" class="sidebar-content">
         <h4><a href="http://www.amazon.com/gp/product/1783985186">Our Ghost Book!</a></h4>
@@ -39,11 +30,24 @@
           fjs.parentNode.insertBefore(js, fjs);
           return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
         }(document, "script", "twitter-wjs"));
-        </script>
+        </script> 
     </div>
+    
+    <div id="sidebar-facebook">
+        <div class="fb-follow" data-href="https://www.facebook.com/howtoghost" data-colorscheme="dark" data-layout="standard" data-show-faces="true"></div>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    </div>
+    
     <div id="optin" class="sidebar-content">
         <form action="//howtoinstallghost.us8.list-manage.com/subscribe/post?u=c81a49b02c06fda2b441f0d8a&amp;id=d399a3db32" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <h4>Get Email Updates</h4>
+            <h4>Upcoming eBook</h4>
             <div class="optin-text">Get updates on our upcoming Ghost for Beginners eBook and other Ghost information!</div>
             <input type="text" size="30" value="Enter your name" name="FNAME" class="name" id="mce-FNAME" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
             <input type="email" size="30" value="Enter your email" name="EMAIL" class="required email" id="mce-EMAIL" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
@@ -56,5 +60,5 @@
         </form>
     </div>
     
-    <a class="large-button" href="http://www.allaboutghost.com/2014-income-and-statistics-report/">2014 Income Report</a>
+    {{!-- <a class="large-button" href="http://www.allaboutghost.com/2014-income-and-statistics-report/">2014 Income Report</a> --}}
 </div>

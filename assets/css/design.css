@@ -90,9 +90,13 @@ html, body {
 	border-radius: 0 0 24px 24px;
 }
 
-#sidebar-twitter {
+#sidebar-twitter, #sidebar-facebook {
 	width: 13.25em;
 	margin: auto;
+}
+
+#sidebar-facebook iframe {
+	margin: 0;
 }
 
 #sidebar-book {
@@ -236,17 +240,16 @@ html, body {
 .post-next-img {width:auto;}
 .post-next-img img {height:50px;float:right;}
 
-.addthis_sharing_toolbox {position:absolute;right:0;top:950px;width:200px;}
 .at-share-tbx-element .at-share-btn {margin: 0 4px;}
 
-.github-link {
+#sharing-icons {
 	text-align: center;
-	padding-bottom: 15px;
+	padding-bottom: 20px;
 }
 
-.github-link a {
-	padding: 5px;
-	border: 1px solid black;
+#twitter-share-post,#facebook-share-post {
+	height: 20px;
+	display: inline-block;
 }
 
 /*Email List*/
