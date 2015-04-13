@@ -31,7 +31,49 @@
 
     </script>
 
-<nav class="navbar navbar-default nav-top" role="navigation">
+<nav class="navbar navbar-default nav-top nav-announcement" role="navigation">
+  <div class="container-fluid" id="announcements-container">
+    <div class="navbar-header announcements-header">
+      <a class="navbar-brand announcements-brand"><img src="/assets/favicon.ico" \></a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div>
+      <ul id="nav-announcements" class="nav navbar-nav navbar-left">
+        <li class="active-site"><a href="/">Ghost for Beginners</a></li>
+        <li><a href="https://allaboutghost.com">All About Ghost</a></li>
+        <li><a href="https://allghostthemes.com">All Ghost Themes</a></li>
+        <li id="last-announcement-li"><a href="https://howtoinstallghost.com">How to Install Ghost</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-left" id="announcement-text">
+        <li>
+            <a href="https://ghostforbeginners.com/ebook">Get updates on our upcoming eBook! <button id="announcement-subscribe">Subscribe</button> </a>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+
+  <script>
+  var announcementsWidth = ($('.navbar-collapse').width() - ($('#nav-announcements').width()+$('.navbar-brand').width()));
+  if (announcementsWidth > 350) {
+      $('#announcement-text li').width(announcementsWidth+20)
+  } else {
+    // $('#announcement-text').width("100%");
+    // $('#announcement-text li').width("100%");
+    $('#announcement-text li').width("");
+  }
+
+  $(window).resize(function() {
+    var announcementsWidth = ($('.navbar-collapse').width() - ($('#nav-announcements').width()+$('.navbar-brand').width()));
+    if (announcementsWidth > 350) {
+      $('#announcement-text li').width(announcementsWidth+20);
+    } else {
+        // $('#announcement-text').width("100%");
+        $('#announcement-text li').width("");
+    }
+  });
+  </script>
+
+
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header navbar nav-blog-name">
