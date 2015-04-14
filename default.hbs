@@ -133,26 +133,6 @@ var WRInitTime=(new Date()).getTime();
 
     {{! The main JavaScript file for Casper }}
     <script type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
-    <script>
-    var announcementsWidth = ($('.navbar-collapse').width() - ($('#nav-announcements').width()+$('.navbar-brand').width()));
-    if (announcementsWidth > 350) {
-        $('#announcement-text li').width(announcementsWidth+20)
-    } else {
-      // $('#announcement-text').width("100%");
-      // $('#announcement-text li').width("100%");
-      $('#announcement-text li').width("");
-    }
-
-    $(window).resize(function() {
-      var announcementsWidth = ($('.navbar-collapse').width() - ($('#nav-announcements').width()+$('.navbar-brand').width()));
-      if (announcementsWidth > 350) {
-        $('#announcement-text li').width(announcementsWidth+20);
-      } else {
-          // $('#announcement-text').width("100%");
-          $('#announcement-text li').width("");
-      }
-    });
-    </script>
 
 <!-- ClickTale Bottom part -->
 
