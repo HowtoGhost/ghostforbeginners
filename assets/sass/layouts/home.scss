@@ -1,0 +1,193 @@
+/*
+ * Styles for the Home Page
+ */
+
+main.content {
+	font-size: 16px;
+}
+
+.main-head {
+	position: relative;
+    display: table;
+    width: 100%;
+    
+	height: 300px;
+	text-align: center;
+    
+	background-size: cover;
+	background-position: center;
+
+	.blog-title {
+		font-family: "Open Sans",sans-serif;
+		font-weight: 100;
+		font-size: 10rem;
+		margin: 10px auto;
+	}
+
+	.blog-description {
+		font-family: "Open Sans",sans-serif;
+		font-size: 20px;
+	}
+}
+
+.main-sections {
+	position: relative;
+	font-family: "Open Sans",sans-serif;
+}
+
+.site-head-content {
+	color: #2f8cde;
+}
+
+.define-header {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.define-content {
+	width: 80%;
+	margin: auto;
+	text-align: left;
+	font-size: 16px;
+	line-height: 1.75;
+	max-width: 1000px;
+
+	a {
+		color: white;
+		text-decoration: underline;
+	}
+}
+
+.sections-header, .define-header {
+	letter-spacing: 2px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.main-after-header {
+	background-color: #2f8cde;
+	text-align: center;
+	padding-top: 15px;
+	color: white;
+	padding-bottom: 10px;
+	font-family: "Open Sans",sans-serif;
+}
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 40px solid transparent; 
+	border-right: 40px solid transparent;	
+	border-top: 30px solid #2f8cde;
+	margin: auto;
+}
+
+#new-to-ghost {
+	text-align: center;
+	font-size: 18px;
+	width: 150px;
+}
+
+.start-here {
+	position:absolute;
+	margin-left: -270px;
+	color:black;
+	width:250px;
+	top: 18px;
+
+	img {
+		width: 100px;
+	}
+}
+
+.sections {
+	text-align: center;
+}
+
+.section-posts {
+	text-align: left;
+	width: 50%;
+	margin: auto;
+	color: white;
+	margin-bottom: 50px;
+}
+
+.section-post {
+	padding: 10px 0 10px 10px; 
+	position: relative;
+	color: white;
+	background-color: #5E5E5E;
+	margin-top: 5px;
+
+	&:hover {
+		background-color: #2f8cde;
+	    -webkit-transition: background-color 100ms linear;
+	    -moz-transition: background-color 100ms linear;
+	    -o-transition: background-color 100ms linear;
+	    -ms-transition: background-color 100ms linear;
+	    transition: background-color 100ms linear;
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+}
+.section-post-header {
+	font-weight: 400;
+	font-size: 20px;
+	margin: 10px 0;
+}
+
+.section-post-paragraph {
+	margin: 0 10px 0 0;
+	font-weight: 300;
+	line-height: normal;
+}
+
+.section-post-inside {
+	padding: 0;
+	border-top: 0;
+	width: 90%;
+}
+
+.section-post-image {
+	height: 100%;
+
+	img {
+		width: 60px;
+	}
+}
+
+.define-header {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	letter-spacing: 2px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.define-content {
+	width: 80%;
+	margin: auto;
+	text-align: left;
+	font-size: 16px;
+	line-height: 1.75;
+	max-width: 1000px;
+
+	a {
+		color:white;
+		text-decoration: underline;
+	}
+}
+.sections-header {
+	letter-spacing: 2px;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 30px;
+	font-weight: 300;
+}
+
+.main-after-header {
+	background-color: #2f8cde;
+	text-align: center;
+	padding-top: 15px;
+	color: white;
+	padding-bottom: 10px;
+	font-family: "Open Sans",sans-serif;
+}

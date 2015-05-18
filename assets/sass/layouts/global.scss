@@ -1,0 +1,32 @@
+/*
+ * Global Styles
+ */
+
+.flex-wrapper {
+	display: flex;
+	display: -webkit-flex;
+  	justify-content: center;
+  	-webkit-justify-content: center;
+  	flex-wrap: wrap;
+  	-webkit-flex-wrap: wrap;
+
+  	@media (max-width: 900px) {
+  		flex-direction: column;
+  		-webkit-flex-direction: column;
+  	}
+}
+
+.flex-content {
+	flex: 3;
+	padding-left: 25px;
+	padding-top: 25px;
+
+	@media (max-width: 550px) {
+		padding-left: 5px;
+	}
+}
+
+.flex-sidebar {
+	flex: 1;
+	// width: 200px;
+}

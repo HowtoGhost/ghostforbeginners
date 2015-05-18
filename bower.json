@@ -1,0 +1,7 @@
+{
+  "name": "Ghost for Beginners",
+  "dependencies": {
+    "jquery": "latest",
+    "fluidbox": "latest"
+  }
+}

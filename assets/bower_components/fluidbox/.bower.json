@@ -1,0 +1,42 @@
+{
+  "name": "fluidbox",
+  "version": "1.4.3",
+  "description": "Replicating Medium's beautiful, minimalist lightbox module",
+  "homepage": "https://github.com/terrymun/Fluidbox",
+  "main": "jquery.fluidbox.js",
+  "authors": [
+    {
+      "name": "Terry Mun",
+      "email": "hello@terrymun.com",
+      "homagepage": "http://terrymun.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/terrymun/Fluidbox/"
+  },
+  "keywords": [
+    "fluidbox",
+    "lightbox"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "package.json"
+  ],
+  "dependencies": {
+    "jquery": ">=1.9"
+  },
+  "_release": "1.4.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.4.3",
+    "commit": "4951f9a0925bf184bc1ab3119973d3b9dee92372"
+  },
+  "_source": "git://github.com/terrymun/Fluidbox.git",
+  "_target": "*",
+  "_originalSource": "fluidbox"
+}
