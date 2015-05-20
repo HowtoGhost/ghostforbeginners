@@ -4,16 +4,16 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 
 <main class="content" role="main">
-    <div class="wrapper">
-        <div id="content" class="col-md-9">
+    <div class="wrapper flex-wrapper">
+        <div id="content" class="flex-content">
             <article class="{{post_class}}">
                 {{#post}}
-                <div class="wrapper">
-                    <h1 class="post-title">{{{title}}}</h1>
-                    <hr class="post-title-hr">
-
+                <div class="post-wrapper">
                     <div class="post-content">
+                        <h1 class="post-title">{{{title}}}</h1>
+                        <hr class="post-title-hr">
                         {{content}}
+
                         <div id="sharing-icons">
                             <div id="facebook-share-post">
                                 <div class="fb-like" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
@@ -33,18 +33,17 @@
                         </div>
 
                         <div id="disqus_thread"></div> 
-
                         <script type="text/javascript">
-                        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                        var disqus_shortname = 'ghostforbeginners'; // required: replace example with your forum shortname
+                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                            var disqus_shortname = 'ghostforbeginners'; // required: replace example with your forum shortname
 
-                        /* * * DON'T EDIT BELOW THIS LINE * * */
-                        (function() {
-                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                        })();
-                    </script>
+                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                            (function() {
+                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                            })();
+                        </script>
                     </div>
                 </div>
             {{/post}}
