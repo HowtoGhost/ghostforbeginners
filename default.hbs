@@ -12,7 +12,7 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="{{asset "/favicon.ico"}}">
+    <link rel="shortcut icon" href="/global-resources/icons/how-to-ghost_logo_favicon.ico">
 
     {{! Styles'n'Scripts }}
 
@@ -21,17 +21,6 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,600,400,300|Source+Sans+Pro|Ubuntu" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
-    
-    <script> //Google Analytics
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-43854863-4', 'ghostforbeginners.com');
-      ga('send', 'pageview');
-
-    </script>
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
@@ -41,96 +30,12 @@
 
 <body class="{{body_class}}">
 
-    <div id="nav-announcement">
-        <ul class="nav-flex">
-            <li class="nav-brand-flex">
-                <a href={{@blog.url}}><img src="/assets/favicon.ico" \></a>
-            </li>
-            <li class="nav-link-flex">
-                <a href="https://ghostforbeginners.com">Ghost for Beginners</a>
-            </li>
-            <li class="nav-link-flex active-site">
-                <a href="https://allaboutghost.com">All About Ghost</a>
-            </li>
-            <li class="nav-link-flex">
-                <a href="https://allghostthemes.com">All Ghost Themes</a>
-            </li>
-            <li class="nav-link-flex">
-                <a href="https://howtoinstallghost.com">How to Install Ghost</a>
-            </li>
-            <li class="nav-action-flex">
-                <a href="https://ghostforbeginners.com/ebook">Get updates on our upcoming eBook! <button id="announcement-subscribe">More Info</button> </a>
-            </li>
-        </ul>
-    </div>
-
-    <div id="main-nav-container">
-        <ul class="main-nav-flex">
-            <li class="main-brand-flex">
-                <a href="/">{{@blog.title}}</a>
-            </li>
-            <li class="main-link-flex">
-                <a href="/#getting-started">Basics</a>
-            </li>
-            <li class="main-link-flex">
-                <a href="/theming">Theming</a>
-            </li>
-            <li class="main-link-flex">
-                <a href="/about">About Us</a>
-            </li>
-            <li class="main-link-flex">
-                <a href="/contact">Contact Us</a>
-            </li>
-            <li class="main-link-flex">
-                <a href="/resources">Resources</a>
-            </li>
-            <li id="twitter-menu" class="main-img-flex">
-                <a href="http://twitter.com/howtoghost"><img src="{{asset "images/twitter.png"}}"></img></a>
-            </li>
-            <li id="facebook-menu" class="main-img-flex">
-                <a href="http://facebook.com/howtoghost"><img src="{{asset "images/facebook.png"}}"></img></a>
-            </li>
-        </ul>
-    </div>
-
+    {{navigation}}
 
     {{! Everything else gets inserted here }}
     {{{body}}}
 
-    <footer class="site-footer">
-        <div class="footer-wrapper">
-            <h4 class="footer-header"><a href="/resources">Resource Page</a></h4>
-            <hr class="footer-hr">
-            <div class="footer-info">
-                <p>Check out our resource page for a list of all the resources we use to make How to Install Ghost.</p>
-            </div>
-        </div>
-        <div class="footer-wrapper">
-            <a href="/about"><h4 class="footer-header">About Us</h4></a>
-            <hr class="footer-hr">
-            <div class="footer-info">
-                <p>Learn all about our background with Ghost and how/why we decided to create this website.</p>   
-            </div>             
-        </div>
-        <div class="footer-wrapper">
-            <h4 class="footer-header">Our Other Sites</h4>
-            <hr class="footer-hr">
-            <div class="footer-info">
-                <p><a href="http://howtoinstallghost.com">How to Install Ghost</a></p>
-                <p><a href="http://allaboutghost.com">All About Ghost</a></p>
-                <p><a href="http://allghostthemes.com">All Ghost Themes</a></p> 
-            </div>             
-        </div>
-        <div class="footer-wrapper">
-            <h4 class="footer-header">Contact Us</h4>
-            <hr class="footer-hr">
-            <div class="footer-info">
-                <p>Twitter: <a href="http://twitter.com/howtoghost">@howtoghost</a></p>
-                <p>Email: info@howtoinstallghost.com</p>
-            </div>
-        </div>
-        <br style="clear:both">
-    </footer>
+    {{> footer}}
 
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}

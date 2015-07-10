@@ -1,3 +1,7 @@
 .DS*
 npm*
+assets/css/style*
 .sass-cache*
+partials/navigation*
+partials/sidebar*
+partials/footer*
