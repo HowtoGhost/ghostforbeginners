@@ -58,9 +58,11 @@
 
 .next-post-flex {
 	display: flex;
+	display: -webkit-flex;
 
 	.next-post-item {
 		flex: 1;
+		-webkit-flex: 1;
 		text-align: center;
 
 		a {
