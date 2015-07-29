@@ -1,0 +1,23 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+<main class="content" role="main">
+
+    <article id="ebook-page" class="{{post_class}}">
+
+        {{#post}}
+
+            <h1 class="post-title">{{{title}}}</h1>
+            <hr class="post-title-hr">
+
+            <section class="post-content">
+                {{content}}
+            </section>
+
+        {{/post}}
+
+    </article>
+
+</main>

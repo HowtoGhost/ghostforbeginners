@@ -1,0 +1,44 @@
+/*
+ * Styles for the GFB eBook Landing Page
+ */
+
+#ebook-image {
+	text-align: center;
+	float: right;
+	width: 40%;
+	margin-left: 15px;
+	margin-bottom: 10px;
+
+	img {
+		width: 100%;
+	}
+
+	@media (max-width: 600px) {
+		float: none;
+		width: 70%;
+		margin: auto;
+
+		img {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+#ebook-page {
+	margin: auto;
+	margin-bottom: 30px;
+
+	@media (max-width: 830px) {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+}
+
+#ebook-signup {
+	width: 30%;
+
+	@media (max-width: 600px) {
+		width: 50%;
+		margin: auto;
+	}
+}
