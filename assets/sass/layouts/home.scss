@@ -36,7 +36,23 @@ main.content {
 }
 
 .site-head-content {
-	color: #2f8cde;
+	color: #273338;
+}
+
+.getting-started {
+	width: 240px;
+	border-radius: 15px;
+	background-color: #2f8cde;
+	margin: 20px auto;
+	display: flex;
+	display: -webkit-flex;
+
+	a {
+		color: white;
+		text-decoration: none;
+		padding: 20px;
+		width: 100%;
+	}
 }
 
 .define-header {
