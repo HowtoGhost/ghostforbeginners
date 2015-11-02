@@ -13,14 +13,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="shortcut icon" href="/global-resources/icons/how-to-ghost_logo_favicon.ico">
-
-    {{! Styles'n'Scripts }}
-
-    <script type="text/javascript" src={{asset "bower_components/jquery/dist/jquery.min.js"}}></script>
-
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,600,400,300|Source+Sans+Pro|Ubuntu" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,600,400,300|Source+Sans+Pro|Ubuntu" />
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
@@ -40,6 +35,9 @@
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
+    {{! Styles'n'Scripts }}
+
+    <script type="text/javascript" src={{asset "bower_components/jquery/dist/jquery.min.js"}}></script>
     <script type="text/javascript" src={{asset "bower_components/fluidbox/jquery.fluidbox.min.js"}}></script>
     <script>
         $('.post-content a, .post a').fluidbox({
