@@ -2,6 +2,9 @@
  * Global Styles
  */
 
+body {
+	display: block !important;
+}
 .flex-wrapper {
 	display: flex;
 	display: -webkit-flex;
