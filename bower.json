@@ -2,6 +2,7 @@
   "name": "Ghost for Beginners",
   "dependencies": {
     "jquery": "latest",
-    "fluidbox": "latest"
+    "fluidbox": "latest",
+    "remodal": "latest"
   }
 }
