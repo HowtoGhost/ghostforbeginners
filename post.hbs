@@ -1,4 +1,7 @@
 {{!< default}}
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "c749c23b-e1b0-4c62-950b-46abcd111f80", doNotHash: true, doNotCopy: false, hashAddressBar: false});</script>
 
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
@@ -14,23 +17,15 @@
                         <hr class="post-title-hr">
                         {{content}}
 
-                        <div id="sharing-icons">
-                            <div id="facebook-share-post">
-                                <div class="fb-like" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
-                                <div id="fb-root"></div>
-                                <script>(function(d, s, id) {
-                                  var js, fjs = d.getElementsByTagName(s)[0];
-                                  if (d.getElementById(id)) return;
-                                  js = d.createElement(s); js.id = id;
-                                  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
-                                  fjs.parentNode.insertBefore(js, fjs);
-                                }(document, 'script', 'facebook-jssdk'));</script>
-                            </div>
-                            <div id="twitter-share-post">
-                                <a href="https://twitter.com/share" class="twitter-share-button" data-via="howtoghost">Tweet</a>
-                                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                            </div>
+                        <div id="sharing-icons" style="margin-top:25px;">
+                            <span class='st_facebook_large' displayText='Facebook'></span>
+                            <span class='st_twitter_large' displayText='Tweet'></span>
+                            <span class='st_googleplus_large' displayText='Google +'></span>
+                            <span class='st_reddit_large' displayText='Reddit'></span>
+                            <span class='st_stumbleupon_large' displayText='StumbleUpon'></span>
+                            <span class='st_email_large' displayText='Email'></span>
                         </div>
+                        <script src="https://app.convertkit.com/landing_pages/31115.js"></script>
 
                         <div id="disqus_thread"></div> 
                         <script type="text/javascript">
