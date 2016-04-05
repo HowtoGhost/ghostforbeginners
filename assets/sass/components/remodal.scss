@@ -1,0 +1,25 @@
+//Styles for remodal windows
+#report-buttons-container {
+    float: right;
+    a {
+        padding: 15px;
+        border-radius: 10px;
+        background-color: #2196f3;
+        color: white;
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+
+.remodal-titles {
+	margin: 10px;
+}
+#remodal-desc-input {
+	width: 75%;
+	height: 100px;
+	margin-bottom: 15px;
+}
+
+.remodal-buttons {
+    margin-bottom: 15px;
+}

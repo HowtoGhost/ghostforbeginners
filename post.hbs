@@ -1,7 +1,8 @@
 {{!< default}}
-<script type="text/javascript">var switchTo5x=true;</script>
-<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "c749c23b-e1b0-4c62-950b-46abcd111f80", doNotHash: true, doNotCopy: false, hashAddressBar: false});</script>
+
+<link rel="stylesheet" type="text/css" href="{{asset "bower_components/remodal/dist/remodal.css"}}" />
+<link rel="stylesheet" type="text/css" href="{{asset "bower_components/remodal/dist/remodal-default-theme.css"}}" />
+<script type="text/javascript" src="{{asset "bower_components/remodal/dist/remodal.min.js"}}"></script>
 
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
@@ -14,6 +15,39 @@
                 <div class="post-wrapper">
                     <div class="post-content">
                         <h1 class="post-title">{{{title}}}</h1>
+                        <section class="post-meta">
+                            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">Last Update on {{date format="DD MMMM YYYY"}}</time>
+                            <div id="report-buttons-container" class="shareIcons">
+                                <a data-remodal-target="problem">Article Needs to be Updated?</a>
+                                <div class="remodal" data-remodal-id="problem" data-remodal-options="closeOnConfirm: false, hashTracking: false">
+                                    <button data-remodal-action="close" class="remodal-close"></button>
+                                    <form action="//formspree.io/info@howtoinstallghost.com"
+                                          method="POST">
+                                        <input type="hidden" name="_subject" value="[Ghost for Beginners Problem]" />
+                                        <input type="hidden" name="_next" />
+                                        <p class="remodal-titles">Your Email:</p>
+                                        <input id="remodal-email" type="email" name="_replyto">
+                                        <p class="remodal-titles">Description of Problem:</p>
+                                        <textarea id="remodal-desc-input" name="message" rows="5" placeholder="What needs to be updated"></textarea>
+                                        <div class="remodal-buttons">
+                                            <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+                                            {{!-- <button data-remodal-action="confirm" class="remodal-confirm" type="submit" value="Send">Send</button> --}}
+                                            <input id="problem-confirm" class="remodal-confirm" type="submit" value="Send">
+                                        </div>
+                                    </form>
+                                    {{!-- Need to setup on success to close the window via javascript, also figure out where to send them? antoher modal maybe? --}}
+                                </div>
+                                <div class="remodal" data-remodal-id="thanks">
+                                    <p>Email sent. Thanks!!</p>
+                                    <button data-remodal-action="cancel" class="remodal-cancel">Close</button>
+                                </div>
+                            </div>
+
+                            <script>
+                                $('input[name=_subject]').val('[Ghost for Beginners Problem] - ' + window.location.pathname);
+                                $('input[name=_next]').val(window.location.pathname + "#thanks");
+                            </script>
+                        </section>
                         <hr class="post-title-hr">
                         {{content}}
 
@@ -25,7 +59,8 @@
                             <span class='st_stumbleupon_large' displayText='StumbleUpon'></span>
                             <span class='st_email_large' displayText='Email'></span>
                         </div>
-                        <script src="https://app.convertkit.com/landing_pages/31115.js"></script>
+                        
+                        <script src="https://app.convertkit.com/landing_pages/39044.js"></script>
 
                         <div id="disqus_thread"></div> 
                         <script type="text/javascript">
