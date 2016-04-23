@@ -1,0 +1,215 @@
+/*
+ * Styles for the Navigation Bar
+ */
+
+#nav-container {
+    margin-bottom: 25px;
+}
+
+
+/*
+ * Annoucnement Bar Section
+ */
+
+.announcement-flex {
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    padding: 15px;
+    list-style-type: none;
+    font-size: 16px;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    margin: 0;
+    background-color: #273338;
+}
+
+.nav-brand-flex {
+    flex: 2;
+    -webkit-flex: 2;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    li {
+        align-self: center;
+        -webkit-align-self: center;
+        display: flex;
+        display: -webkit-flex;
+        #nav-site-title {
+            align-self: center;
+            font-size: 2rem;
+        }
+    }
+    img {
+        height: 30px;
+        margin-right: 10px;
+    }
+    &:hover {
+        color: white;
+    }
+    @media (max-width: 700px) {
+        margin: auto;
+    }
+}
+
+.top-menu-items {
+    text-align: center;
+    a {
+        width: 100%;
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: white;
+        img {
+            height: 30px;
+            width: 30px;
+            margin-right: 5px;
+        }
+        @media (max-width: 760px) {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+
+/*
+ * Other Sites Bar
+ */
+
+.guides-flex {
+    background-color: #1D8076;
+    padding: 10px;
+    text-decoration: none;
+    justify-content: center;
+    li {
+        color: white;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+        font-size: 1.75rem;
+    }
+    #guides-separator {
+        width: 0;
+        border: 2px solid;
+        list-style-type: none;
+        border-radius: 5px;
+    }
+    #guides-main {
+        font-size: 2.5rem;
+    }
+    #guide-arrow {
+        flex: .5;
+        -webkit-flex: .5;
+        img {
+            width: 50px;
+            transition: transform 1s ease-in-out;
+        }
+    }
+}
+
+// .other-sites-flex {
+//     align-items: center;
+//     -webkit-align-items: center;
+//     justify-content: center;
+//     -webkit-justify-content: center;
+//     flex-wrap: wrap;
+//     -webkit-flex-wrap: wrap;
+//     list-style-type: none;
+//     padding: 5px;
+//     margin: 0;
+//     a {
+//         height: 100%;
+//         display: flex;
+//         display: -webkit-flex;
+//         text-decoration: none;
+//         padding: 15px;
+//         font-size: 16px;
+//         color: #88a3b0;
+//         div {
+//             align-self: center;
+//             -webkit-align-self: center;
+//         }
+//         &:hover {
+//             color: #e3f2fd;
+//         }
+//         img {
+//             height: 30px;
+//             width: 30px;
+//             margin-right: 5px;
+//         }
+//     }
+//     @media (max-width: 450px) {
+//         flex-direction: column;
+//         -webkit-flex-direciton: column;
+//     }
+// }
+
+/*
+  * Current Site's Nav
+  */
+
+.main-nav {
+    display: none;
+}
+
+.main-nav-flex {
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    list-style-type: none;
+    font-size: 16px;
+    margin: 0;
+    background-color: #494949;
+    a {
+        padding: 20px;
+        text-align: center;
+        color: #e3f2fd;
+        text-decoration: none;
+        &:hover {
+            color: white;
+        }
+    }
+    @media (max-width: 760px) {
+        padding-top: 0;
+        flex-wrap: nowrap;
+        -webkit-flex-wrap: nowrap;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+    }
+}
+
+.tt-hint,
+.tt-input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 0;
+    &:focus {
+        outline-width: 0;
+    }
+}
+
+.tt-menu {
+    background-color: white;
+    border: 1px solid #3A4145;
+    padding: 0;
+    right: 0;
+    left: auto !important;
+    top: 15px;
+    border-radius: 5px;
+    width: 300px;
+    max-height: 225px;
+    overflow-y: auto;
+    .tt-suggestion {
+        padding: 0;
+        margin: 0;
+        a {
+            padding: 15px 5px;;
+            color: #3A4145;
+            line-height: 1;
+            &:hover {
+                background-color: #1D8076;
+                color: white;
+            }
+        }
+    }
+}

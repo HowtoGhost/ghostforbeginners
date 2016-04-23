@@ -8,14 +8,6 @@
 @import '../css/screen.css';
 
 //
-// Components: Groups of Patterns
-// --------------------------------------------------
-@import '../../global-resources/sass/navigation';
-@import '../../global-resources/sass/footer';
-@import '../../global-resources/sass/sidebar';
-@import 'components/remodal';
-
-//
 // Layouts: Groups of Components
 // --------------------------------------------------
 @import 'layouts/global';
@@ -23,4 +15,12 @@
 @import 'layouts/post';
 @import 'layouts/page';
 @import 'layouts/error';
-@import 'layouts/ebook-page'
+@import 'layouts/ebook-page';
+
+//
+// Components: Groups of Patterns
+// --------------------------------------------------
+@import 'components/navigation';
+@import 'components/footer';
+@import 'components/sidebar';
+@import 'components/remodal';

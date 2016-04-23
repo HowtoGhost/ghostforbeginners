@@ -6,30 +6,6 @@ main.content {
 	font-size: 16px;
 }
 
-.main-head {
-	position: relative;
-    display: table;
-    width: 100%;
-    
-	height: 300px;
-	text-align: center;
-    
-	background-size: cover;
-	background-position: center;
-
-	.blog-title {
-		font-family: "Open Sans",sans-serif;
-		font-weight: 100;
-		font-size: 10rem;
-		margin: 10px auto;
-	}
-
-	.blog-description {
-		font-family: "Open Sans",sans-serif;
-		font-size: 20px;
-	}
-}
-
 .main-sections {
 	position: relative;
 	font-family: "Open Sans",sans-serif;
@@ -37,22 +13,6 @@ main.content {
 
 .site-head-content {
 	color: #273338;
-}
-
-.getting-started {
-	width: 240px;
-	border-radius: 15px;
-	background-color: #2f8cde;
-	margin: 20px auto;
-	display: flex;
-	display: -webkit-flex;
-
-	a {
-		color: white;
-		text-decoration: none;
-		padding: 20px;
-		width: 100%;
-	}
 }
 
 .define-header {
@@ -77,15 +37,6 @@ main.content {
 .sections-header, .define-header {
 	letter-spacing: 2px;
 	font-family: 'Ubuntu', sans-serif;
-}
-
-.main-after-header {
-	background-color: #2f8cde;
-	text-align: center;
-	padding-top: 15px;
-	color: white;
-	padding-bottom: 10px;
-	font-family: "Open Sans",sans-serif;
 }
 
 .arrow-down {
