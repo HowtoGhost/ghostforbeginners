@@ -7,8 +7,103 @@
 <main class="content" role="main">
 
 <div class="wrapper flex-wrapper">
-    <div id="content" class="flex-content">
-
+    <div id="content" class="flex-content home-content">
+        <div class="home-section flex-vertical">
+            <h3 class="home-header">Popular Guides</h3>
+            <div class="home-popular-container flex">
+                {{#get "posts" limit="2" page="1" filter="tag:home-page-guide"}}
+                    {{#foreach posts}}
+                    <a href="{{slug}}" class="home-popular-item flex flex-one">
+                        <img class="home-popular-img" src="{{image}}">
+                        <div class="home-popular-desc">
+                            <div class="home-popular-title">{{title}}</div>
+                            <div class="home-popular-meta">{{meta_description}}</div>
+                        </div>
+                    </a>
+                    {{/foreach}}
+                {{/get}}
+            </div>
+            <div class="home-popular-container flex">
+                {{#get "posts" limit="2" page="2" filter="tag:home-page-guide"}}
+                    {{#foreach posts}}
+                    <a href="{{slug}}" class="home-popular-item flex flex-one">
+                        <img class="home-popular-img" src="{{image}}">
+                        <div class="home-popular-desc">
+                            <div class="home-popular-title">{{title}}</div>
+                            <div class="home-popular-meta">{{meta_description}}</div>
+                        </div>
+                    </a>
+                    {{/foreach}}
+                {{/get}}
+            </div>
+            <div class="home-popular-container flex">
+                {{#get "posts" limit="2" page="3" filter="tag:home-page-guide"}}
+                    {{#foreach posts}}
+                    <a href="{{slug}}" class="home-popular-item flex flex-one">
+                        <img class="home-popular-img" src="{{image}}">
+                        <div class="home-popular-desc">
+                            <div class="home-popular-title">{{title}}</div>
+                            <div class="home-popular-meta">{{meta_description}}</div>
+                        </div>
+                    </a>
+                    {{/foreach}}
+                {{/get}}
+            </div>
+        </div>
+        <div class="home-section flex-vertical">
+            <h3 class="home-header">Awesome Themes</h3>
+            <div class="home-themes-container flex">
+            {{#get "posts" limit="3" filter="tag:home-page-theme"}}
+                {{#foreach posts}}
+                <a href="{{slug}}" class="home-theme-item flex-vertical flex-one">
+                    <img class="home-theme-img" src="{{image}}">
+                    <div class="home-theme-desc">
+                        <div class="home-theme-title">{{title}}</div>
+                        <div class="home-theme-meta">{{meta_description}}</div>
+                    </div>
+                </a>
+                {{/foreach}}
+            {{/get}}
+            </div>
+        </div>
+        <hr class="home-hr">
+        <div class="home-section flex home-articles-hosting">
+            <div class="home-articles-container flex-vertical flex-one">
+                <h3 class="home-header">Recent Articles</h3>
+                {{#get "posts" limit="4"}}
+                    {{#foreach posts}}
+                    <a href="{{slug}}" class="home-recent-item flex-vertical flex-one">
+                        <div class="home-recent-desc">
+                            <div class="home-recent-title">{{title}}</div>
+                            <div class="home-recent-meta">{{meta_description}}</div>
+                        </div>
+                    </a>
+                    {{/foreach}}
+                {{/get}}
+            </div>
+            <div class="vertical-hr"></div>
+            <div class="home-hosting-container flex-vertical">
+                <h3 class="home-header home-hosting-header">The Best Ghost Hosting</h3>
+                <div class="home-hosting-hosts">
+                    <a href="how-to-host-ghost-on-ghost-org" class="home-hosting-item flex-vertical flex-one">
+                        <div class="home-hosting-img">
+                            <img src="{{asset "images/GhostPro_logo.png"}}">
+                        </div>
+                        <div class="home-hosting-desc">
+                            <div class="home-hosting-meta">Host Ghost with the creaters themselves. Get amazing hosting and support the project at the same time!</div>
+                        </div>
+                    </a>
+                    <a href="how-to-host-ghost-on-ghost-org" class="home-hosting-item flex-vertical flex-one">
+                        <div class="home-hosting-img">
+                            <img src="{{asset "images/DigitalOcean_logo.png"}}">
+                        </div>
+                        <div class="home-hosting-desc">
+                            <div class="home-hosting-meta">Host your Ghost blog where we do. Fast, cheap, flexible. Get $10 off by going through our link.</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
     {{> "sidebar"}}    
 </div>
