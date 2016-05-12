@@ -45,6 +45,9 @@
                             </script>
                         </section>
                         <hr class="post-title-hr">
+                        {{#if image}}
+                            <img class="post-img" src="{{image}}">
+                        {{/if}}
                         {{content}}
 
                         <div id="sharing-icons" style="margin-top:25px;">
