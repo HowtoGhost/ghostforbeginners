@@ -9,6 +9,10 @@
         cursor: pointer;
         text-decoration: none;
     }
+    @media (max-width: 500px) {
+        float: none;
+        margin: 20px 0 10px;
+    }
 }
 
 .remodal-titles {

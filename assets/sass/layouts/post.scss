@@ -44,6 +44,9 @@
 .post-meta {
 	margin-top: 15px;
 	width: 100%;
+	@media (max-width: 500px) {
+		text-align: center;
+	}
 }
 .post-menu {
 	float: right;

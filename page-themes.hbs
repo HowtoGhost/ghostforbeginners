@@ -1,0 +1,37 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! The main content area on the homepage }}
+<main class="content" role="main">
+
+<div class="wrapper flex-wrapper">
+    <div id="content" class="flex-content home-content">
+        <table id="indexTable" class="display responsive" width="100%">
+            <thead>
+                <tr>
+                    <th class="tableNameHeader tdCenter">Theme Name</th>
+                    <th class="tableDemoHeader tdCenter">Demo</th>
+                    <th class="tablePriceHeader tdCenter min-tablet-l">Price</th>
+                    <th class="tableDescHeader tdCenter min-tablet-l">Description</th>
+                    <th class="tableColumnHeader tdCenter min-tablet-l">Columns</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.0.2/css/responsive.dataTables.min.css">
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.0.2/css/responsive.dataTables.min.css"></script>
+<script type="text/javascript" src="{{asset "js/datatables-initialize.js"}}"></script>
+<script>
+$(document).ready(function() {
+    datatableInitialize();
+});
+</script>
+</main>
