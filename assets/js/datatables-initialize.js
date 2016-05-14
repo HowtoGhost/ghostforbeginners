@@ -3,11 +3,8 @@ function datatableInitialize(tagPage) {
     var tagFilter = "tag:-blog";
     if (typeof(tagPage) !== "undefined") {
         tagFilter = "tag:" + tagPage;
-        console.log(tagFilter);
-
     }
     var indexDatatable = $('#indexTable').on('xhr.dt', function(e, settings, json, xhr) {
-        console.log(json.posts);
         //transform data before being put into datatables
         for (i = 0; i < json.posts.length; i++) {
             //Grab the html content content and turn into a jQuery object
@@ -25,7 +22,11 @@ function datatableInitialize(tagPage) {
             //Save new data as the html variable
             json.posts[i].html = descSlice;
             //encode url into hidden div that then gets replaced on the init below
-            json.posts[i].image = "<a href='" + json.posts[i].url + "'><img src='" + encodeURI(json.posts[i].image) + "' /></a>";
+            if (json.posts[i].image === "") {
+                json.posts[i].image = "<a href='" + json.posts[i].url + "'><img src='//cdn.allghostthemes.com/assets/images/" + encodeURI(json.posts[i].title) + ".jpg' /></a>";
+            } else {
+                json.posts[i].image = "<a href='" + json.posts[i].url + "'><img src='" + encodeURI(json.posts[i].image) + "' /></a>";
+            }
         }
     }).on('init.dt', function() {
         loadAllImages(indexDatatable);
