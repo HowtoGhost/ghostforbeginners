@@ -46,10 +46,14 @@
 
 .home-theme-item {
     text-decoration: none;
-    .home-theme-img {}
+    .home-theme-img {
+        margin: 0 auto;
+    }
     .home-theme-title {
         font-weight: 600;
         font-size: 18px;
+        text-align: center;
+        margin-top: 10px;
     }
     .home-theme-meta {
         font-size: 16px;
