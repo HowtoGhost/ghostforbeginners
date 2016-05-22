@@ -65,6 +65,9 @@
         .home-recent-title {
             font-weight: 600;
             font-size: 18px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .home-recent-meta {
             font-size: 16px;
@@ -75,20 +78,19 @@
 }
 
 .home-themes-container {
-	@media (max-width: 600px) {
-		flex-direction: column;
-		-webkit-flex-direction: column;
-		align-items: center;
-		-webkit-align-items: center;
-
-		a {
-			margin-bottom: 15px;
-			max-width: 80%;
-			img {
-				margin: auto;
-			}
-		}
-	}
+    @media (max-width: 600px) {
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        align-items: center;
+        -webkit-align-items: center;
+        a {
+            margin-bottom: 15px;
+            max-width: 80%;
+            img {
+                margin: auto;
+            }
+        }
+    }
 }
 
 .home-articles-hosting {
@@ -98,6 +100,7 @@
     -webkit-align-items: stretch;
     .home-articles-container,
     .home-hosting-container {
+        max-width: 50%;
         @media (max-width: 1000px) {
             max-width: 80%;
         }

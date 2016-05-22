@@ -70,7 +70,7 @@
         <div class="home-section flex home-articles-hosting">
             <div class="home-articles-container flex-vertical flex-one">
                 <h3 class="home-header">Recent Articles</h3>
-                {{#get "posts" limit="4" include="author,tags" filter="tags:beginners"}}
+                {{#get "posts" limit="4" include="author,tags" filter="tags:beginners,tags:developers,tags:blog"}}
                     {{#foreach posts}}
                     <a href="{{slug}}" class="home-recent-item flex-vertical flex-one">
                         <div class="home-recent-desc">
