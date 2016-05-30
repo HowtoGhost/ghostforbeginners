@@ -43,6 +43,7 @@
     text-align: center;
     .optin-text {
         line-height: 1.2;
+        font-size: 1.7rem;
         font-weight: 400;
         text-align: left;
         margin-bottom: 10px;
@@ -83,14 +84,18 @@
 }
 
 .guides {
-    .guides-list p {
-        margin: 0 0 0 10px;
-        a {
-            text-decoration: none;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 300;
-            &:hover {
-                color: #2196f3;
+    .guides-list {
+        margin-top: 10px;
+        p {
+            margin: 0 10px 0 10px;
+            a {
+                text-decoration: none;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 300;
+                font-size: 1.7rem;
+                &:hover {
+                    color: #2196f3;
+                }
             }
         }
     }
@@ -100,6 +105,7 @@
     .ebook-text {
         font-family: 'Open Sans', sans-serif;
         font-weight: 300;
+        font-size: 1.7rem;
         margin: 15px;
         line-height: 1.2;
     }
@@ -164,48 +170,48 @@
 }
 
 // #optin {
-// 	text-align: center;
-// 	margin-bottom: 10px;
+//  text-align: center;
+//  margin-bottom: 10px;
 // }
 // #optin input {
-// 	border: 1px solid #111;
-// 	width: 80%;
-// 	font-size: 15px;
-// 	margin-bottom: 10px;
-// 	padding: 8px 10px;
-// 	border-radius: 3px;
-// 	-moz-border-radius: 3px;
-// 	-webkit-border-radius: 3px;
-// 	box-shadow: 0 2px 2px #111;
-// 	-moz-box-shadow: 0 2px 2px #111;
-// 	-webkit-box-shadow: 0 2px 2px #111
+//  border: 1px solid #111;
+//  width: 80%;
+//  font-size: 15px;
+//  margin-bottom: 10px;
+//  padding: 8px 10px;
+//  border-radius: 3px;
+//  -moz-border-radius: 3px;
+//  -webkit-border-radius: 3px;
+//  box-shadow: 0 2px 2px #111;
+//  -moz-box-shadow: 0 2px 2px #111;
+//  -webkit-box-shadow: 0 2px 2px #111
 // }
 // .subscribe_button {
-// 	background: #494949;
-// 	border: 1px solid #111;
-// 	color: #fff;
-// 	cursor: pointer;
-// 	font-size: 18px;
-// 	font-weight: bold;
-// 	padding: 8px 0;
-// 	text-shadow: -1px -1px #3a060a;
-// 	width: 100%
+//  background: #494949;
+//  border: 1px solid #111;
+//  color: #fff;
+//  cursor: pointer;
+//  font-size: 18px;
+//  font-weight: bold;
+//  padding: 8px 0;
+//  text-shadow: -1px -1px #3a060a;
+//  width: 100%
 // }
 // #ck_success_msg {
-// 	color: white;
-// 	border: 1px solid white;
+//  color: white;
+//  border: 1px solid white;
 // }
 // #optin h4 {
-// 	color: white;
-// 	font-family: "Open Sans",sans-serif;
+//  color: white;
+//  font-family: "Open Sans",sans-serif;
 // }
 // .optin-text {
-// 	font-family: "Open Sans",sans-serif;
-// 	font-size: 13px;
-// 	line-height: 14px;
-// 	margin-bottom: 10px;
+//  font-family: "Open Sans",sans-serif;
+//  font-size: 13px;
+//  line-height: 14px;
+//  margin-bottom: 10px;
 // }
 // #mc-embedded-subscribe {
-// 	margin-left: 0;
-// 	margin-right: 0;
+//  margin-left: 0;
+//  margin-right: 0;
 // }

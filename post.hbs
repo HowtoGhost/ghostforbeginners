@@ -5,7 +5,7 @@
 
 <main class="content" role="main">
     <div class="wrapper flex-wrapper">
-        <div id="content" class="flex-content">
+        <div id="content" class="flex-content theme-content">
             <article class="{{post_class}}">
                 {{#post}}
                 <div class="post-wrapper">
@@ -75,9 +75,8 @@
                 </div>
             {{/post}}
             </article>
-        {{> "sidebar"}}
         </div>
-
+        {{> "sidebar"}}
         <div style="clear:both;"></div>
     </div>
 </main>
