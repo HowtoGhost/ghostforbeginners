@@ -54,6 +54,7 @@
     .home-theme-img {
         margin: 0 auto;
         align-self: center;
+        height: 150px;
     }
     .home-theme-title {
         font-weight: 600;
@@ -88,6 +89,8 @@
 }
 
 .home-themes-container {
+    align-items: baseline;
+    -webkit-align-items: baseline;
     @media (max-width: 600px) {
         flex-direction: column;
         -webkit-flex-direction: column;
