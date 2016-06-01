@@ -57,9 +57,13 @@
                 {{#foreach posts}}
                 <a href="{{slug}}" class="home-theme-item flex-vertical flex-one">
                     {{#if image}}
+                    <div class="home-theme-img-container flex flex-one">
                     <img class="home-theme-img" src="{{image}}">
+                    </div>
                     {{else}}
+                    <div class="home-theme-img-container flex flex-one">
                     <img class="home-theme-img" src='//cdn.allghostthemes.com/assets/images/{{title}}.jpg'>
+                    </div>
                     {{/if}}
                     <div class="home-theme-desc">
                         <div class="home-theme-title">{{title}}</div>
