@@ -9,7 +9,7 @@
                 <h3 class="home-header">Most Popular {{name}} articles</h3>
             {{/tag}}
             <div class="home-popular-container flex">
-                {{#get "posts" limit="2" page="1" filter="tag:popular"}}
+                {{#get "posts" limit="2" page="1" filter="tag:popular-developer"}}
                     {{#foreach posts}}
                     <a href="/{{slug}}" class="home-popular-item flex flex-one">
                         <img class="home-popular-img" src="{{image}}">
@@ -22,7 +22,7 @@
                 {{/get}}
             </div>
             <div class="home-popular-container flex">
-                {{#get "posts" limit="2" page="2" filter="tag:popular"}}
+                {{#get "posts" limit="2" page="2" filter="tag:popular-developer"}}
                     {{#foreach posts}}
                     <a href="/{{slug}}" class="home-popular-item flex flex-one">
                         <img class="home-popular-img" src="{{image}}">
@@ -35,7 +35,7 @@
                 {{/get}}
             </div>
             <div class="home-popular-container flex">
-                {{#get "posts" limit="2" page="3" filter="tag:popular"}}
+                {{#get "posts" limit="2" page="3" filter="tag:popular-developer"}}
                     {{#foreach posts}}
                     <a href="/{{slug}}" class="home-popular-item flex flex-one">
                         <img class="home-popular-img" src="{{image}}">
