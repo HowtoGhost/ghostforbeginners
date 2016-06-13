@@ -31,8 +31,8 @@
 }
 
 .post-title {
-    font-size: 3em;
-    text-align: center;
+    font-size: 2em;
+    text-align: left;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     @media (max-width: 550px) {
@@ -154,6 +154,11 @@
 }
 
 .themedemo {
-	width: 100%;
-	height: 600px;
+    width: 100%;
+    height: 600px;
+}
+
+.post-index-image {
+    max-width: 90%;
+    max-height: 400px;
 }

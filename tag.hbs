@@ -1,76 +1,33 @@
 {{!< default}}
 
 <main class="content" role="main">
-
-<div class="wrapper flex-wrapper">
-    <div id="content" class="flex-content tag-content">
-        <div class="tag-section flex-vertical">
-            {{#tag}}
-                <h3 class="home-header">Most Popular {{name}} articles</h3>
-            {{/tag}}
-            <div class="home-popular-container flex">
-                {{#get "posts" limit="2" page="1" filter="tag:popular"}}
-                    {{#foreach posts}}
-                    <a href="/{{slug}}" class="home-popular-item flex flex-one">
-                        <img class="home-popular-img" src="{{image}}">
-                        <div class="home-popular-desc">
-                            <div class="home-popular-title">{{title}}</div>
-                            <div class="home-popular-meta">{{meta_description}}</div>
-                        </div>
-                    </a>
-                    {{/foreach}}
-                {{/get}}
-            </div>
-            <div class="home-popular-container flex">
-                {{#get "posts" limit="2" page="2" filter="tag:popular"}}
-                    {{#foreach posts}}
-                    <a href="/{{slug}}" class="home-popular-item flex flex-one">
-                        <img class="home-popular-img" src="{{image}}">
-                        <div class="home-popular-desc">
-                            <div class="home-popular-title">{{title}}</div>
-                            <div class="home-popular-meta">{{meta_description}}</div>
-                        </div>
-                    </a>
-                    {{/foreach}}
-                {{/get}}
-            </div>
-            <div class="home-popular-container flex">
-                {{#get "posts" limit="2" page="3" filter="tag:popular"}}
-                    {{#foreach posts}}
-                    <a href="/{{slug}}" class="home-popular-item flex flex-one">
-                        <img class="home-popular-img" src="{{image}}">
-                        <div class="home-popular-desc">
-                            <div class="home-popular-title">{{title}}</div>
-                            <div class="home-popular-meta">{{meta_description}}</div>
-                        </div>
-                    </a>
-                    {{/foreach}}
-                {{/get}}
-            </div>
-        </div>
-        {{#tag}}
-            <h3>{{description}}</h3>
-        {{/tag}}
+    <div class="wrapper flex-wrapper">
+        <div id="content" class="flex-content tag-content">
             {{#foreach posts}}
-            <div class="home-popular-container flex">
-                <a href="/{{slug}}" class="home-popular-item flex flex-one">
-                    {{#if image}}<img class="home-popular-img" src="{{image}}">{{/if}}
-                    <div class="home-popular-desc">
-                        <div class="home-popular-title">{{title}}</div>
-                        <div class="home-popular-meta">{{meta_description}}</div>
-                    </div>
-                </a>
-            </div>
+                <article class="{{post_class}}">
+                    <header class="post-header">
+                        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+                        <section class="post-meta">
+                            <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="D MMM YYYY"}}</time>
+                        </section>
+                    </header>
+                    <section class="post-excerpt">
+                        {{#if image}}<div class="center"><img class="post-index-image" src="{{image}}"></div>{{/if}}
+                        <p>{{{excerpt words="50"}}}&hellip; <a class="read-more" href="{{url}}">Read More</a></p>
+                    </section>
+                </article>
             {{/foreach}}
 
             {{pagination}}
         </div>
-    </div>
-    {{> "sidebar"}}    
-</div>
-
-
-    {{!! After all the posts, we have the previous/next pagination links }}
-    
-
+            {{> "sidebar"}}  
+        </div>
+    </div> 
 </main>
+
+<script>
+    //Remove links to github
+    for (i = 0; i < $('.post-excerpt p').length; i++) {
+        $('.post-excerpt p')[i].innerHTML = $('.post-excerpt p')[i].innerHTML.replace("Link to Example Code on Github", "")
+    }
+</script>
