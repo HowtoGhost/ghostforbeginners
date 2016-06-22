@@ -8,104 +8,112 @@
 <div class="wrapper flex-wrapper">
     <div id="content" class="flex-content theme-content">
         {{!-- {{content}} --}}
-        <h1 class="center">Where should you host?</h1>
+        <h2 id="where" class="center">Where should you host?</h2>
         <div class="flex">
-            <div class="flex-vertical">
-                <img src="">
-                <div class="hosting-title">Ghost(Pro)</div>
-                <div class="hosting-desc">Ghost(Pro) is far and away the easiest place to host your new Ghost blog.</div>
-            </div>
-            <div class="flex-vertical">
-                <img src="">
-                <div class="hosting-title">DigitalOcean</div>
-                <div class="hosting-desc">DigitalOcean is one of the cheapest and most flexible places to host your new blog.</div>
-            </div>
+            <a href="/how-to-host-ghost-on-ghost-org/" class="beginners-link flex-vertical">
+                <div class="beginners-images flex">
+                    <img src="{{asset "/images/GhostPro_logo.png"}}">
+                </div>
+                <div class="hosting-desc">Ghost(Pro) is our most recommended platform. With Ghost(Pro), there are no worries other than writing on your blog. They take care of the updates, backups, maintenance, security, and performance for you. On top of amazing performance and service, you also help fund the Ghost project by hosting here.</div>
+            </a>
+            <a href="/how-to-install-ghost-on-digitalocean/" class="beginners-link flex-vertical">
+                <div class="beginners-images flex">
+                    <img src="{{asset "/images/DigitalOcean_logo.png"}}">
+                </div>
+                <div class="hosting-desc">DigitalOcean is where we host Ghost for Beginners and is one of the cheapest and most relaible places to host your blog. It does take some more work as you need to perform all the maintenance, updates, backups, etc yourself, but if your comfortable with using command line or have managed servers before, DigitalOcean is incredible.</div>
+            </a>
         </div>
-        <h1>Learn the Ghost basics</h1>
+        <h2 id="learn" class="center">Learn the Ghost basics</h2>
         <div class="flex">
-            <div class="flex-vertical">
-                <img src="">
+            <a href="" class="beginners-link flex-vertical flex-one">
+                <img class="beginners-images" src="{{asset "/images/Basic Markdown.jpg"}}">
                 <div class="hosting-title">Basic Markdown</div>
-                <div class="hosting-desc">Ghost(Pro) is far and away the easiest place to host your new Ghost blog.</div>
-            </div>
-            <div class="flex-vertical">
-                <img src="">
-                <div class="hosting-title">Add images to your posts</div>
-                <div class="hosting-desc">DigitalOcean is one of the cheapest and most flexible places to host your new blog.</div>
-            </div>
-            <div class="flex-vertical">
-                <img src="">
-                <div class="hosting-title">Categorize your posts with tags</div>
-                <div class="hosting-desc">DigitalOcean is one of the cheapest and most flexible places to host your new blog.</div>
-            </div>
+                <div class="hosting-desc">Learn how to use markdown so you can quickly and efficiently write on your blog.</div>
+            </a>
+            <a href="" class="beginners-link flex-vertical flex-one">
+                <img class="beginners-images" src="{{asset "/images/Add Images to Ghost Blog Posts Smaller.jpg"}}">
+                <div class="hosting-title">Add Images to your Posts</div>
+                <div class="hosting-desc">Easily add images to your blog post to keep your readers engaged or show off your photos.</div>
+            </a>
+            <a href="" class="beginners-link flex-vertical flex-one">
+                <img class="beginners-images" src="{{asset "/images/Categorize Blog Posts with Tags Smaller.jpg"}}">
+                <div class="hosting-title">Categorize your Posts with Tags</div>
+                <div class="hosting-desc">Add tags to your posts to group them together for visitors who are looking for specific content.</div>
+            </a>
         </div>
-        <h1>Move your old blog's data over</h1>
+        <h2 id="move" class="center">Move your old blog's data over</h2>
         <div class="flex">
-            <div class="flex-vertical">
-                <img src="">
+            <a href="" class="beginners-link flex-vertical">
+                <img class="beginners-images" src="">
                 <div class="hosting-title">Wordpress to Ghost</div>
                 <div class="hosting-desc">Ghost(Pro) is far and away the easiest place to host your new Ghost blog.</div>
-            </div>
-            <div class="flex-vertical">
-                <img src="">
+            </a>
+            <a href="" class="beginners-link flex-vertical">
+                <img class="beginners-images" src="">
                 <div class="hosting-title">Tumblr to Ghost</div>
                 <div class="hosting-desc">DigitalOcean is one of the cheapest and most flexible places to host your new blog.</div>
-            </div>
-            <div class="flex-vertical">
-                <img src="">
+            </a>
+            <a href="" class="beginners-link flex-vertical">
+                <img class="beginners-images" src="">
                 <div class="hosting-title">Blogger to Ghost</div>
                 <div class="hosting-desc">DigitalOcean is one of the cheapest and most flexible places to host your new blog.</div>
-            </div>
+            </a>
         </div>
-        <h1>Find a nice theme</h1>
+        <h2 id="theme" class="center">Find a nice theme</h2>
         <div class="flex">
-            <div class="flex-vertical">
-                <img src="">
+            <a href="" class="beginners-link flex-vertical">
+                <img class="beginners-images" src="">
                 <div class="hosting-title">All Ghost Themes</div>
                 <div class="hosting-desc">Ghost(Pro) is far and away the easiest place to host your new Ghost blog.</div>
-            </div>
-            <div class="flex-vertical">
-                <img src="">
+            </a>
+            <a href="" class="beginners-link flex-vertical">
+                <img class="beginners-images" src="">
                 <div class="hosting-title">Themeforest</div>
                 <div class="hosting-desc">DigitalOcean is one of the cheapest and most flexible places to host your new blog.</div>
-            </div>
-            <div class="flex-vertical">
-                <img src="">
+            </a>
+            <a href="" class="beginners-link flex-vertical">
+                <img class="beginners-images" src="">
                 <div class="hosting-title">Ghost Marketplace</div>
                 <div class="hosting-desc">DigitalOcean is one of the cheapest and most flexible places to host your new blog.</div>
-            </div>
+            </a>
         </div>
-        <h1>Learn to edit your theme</h1>
+        <h2 id="edit-theme" class="center">Learn to edit your theme</h2>
         <div class="flex">
-            <div class="flex-vertical">
-                <img src="">
+            <a href="" class="beginners-link flex-vertical">
+                <img class="beginners-images" src="">
                 <div class="hosting-title">Theme basics</div>
                 <div class="hosting-desc">Ghost(Pro) is far and away the easiest place to host your new Ghost blog.</div>
-            </div>
-            <div class="flex-vertical">
-                <img src="">
+            </a>
+            <a href="" class="beginners-link flex-vertical">
+                <img class="beginners-images" src="">
                 <div class="hosting-title">Enable comments on your blog</div>
                 <div class="hosting-desc">DigitalOcean is one of the cheapest and most flexible places to host your new blog.</div>
-            </div>
-            <div class="flex-vertical">
-                <img src="">
+            </a>
+            <a href="" class="beginners-link flex-vertical">
+                <img class="beginners-images" src="">
                 <div class="hosting-title">Add Google Analytics</div>
                 <div class="hosting-desc">DigitalOcean is one of the cheapest and most flexible places to host your new blog.</div>
-            </div>
+            </a>
         </div>
-        <h1>Keep your data safe</h1>
+        <h2 id="backup" class="center">Backing up your data</h2>
         <div class="flex">
-            <div class="flex-vertical">
+            <a href="" class="beginners-link flex-vertical">
                 <div class="hosting-title">Backup posts from Ghost admin</div>
                 <div class="hosting-desc">Ghost(Pro) is far and away the easiest place to host your new Ghost blog.</div>
-            </div>
-            <div class="flex-vertical">
-                <img src="">
+            </a>
+            <a href="" class="beginners-link flex-vertical">
+                <img class="beginners-images" src="">
                 <div class="hosting-title">Backup entire file structure</div>
                 <div class="hosting-desc">DigitalOcean is one of the cheapest and most flexible places to host your new blog.</div>
-            </div>
+            </a>
         </div>
-
+        <h2 id="more-info" class="center">Even more information</h2>
+        <div class="flex">
+            <a href="" class="beginners-link flex-vertical">
+                <div class="hosting-title">Ghost for Beginners eBook</div>
+                <div class="hosting-desc">Ghost(Pro) is far and away the easiest place to host your new Ghost blog.</div>
+            </a>
+        </div>
     </div>
     {{> "sidebar"}}   
 </div>
