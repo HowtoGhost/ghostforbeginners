@@ -35,3 +35,9 @@
         height: auto;
     }
 }
+
+@media (max-width: 650px) {
+	.beginners-flex {
+		flex-direction: column;
+	}
+}
