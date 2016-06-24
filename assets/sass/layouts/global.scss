@@ -63,3 +63,9 @@ body {
 	text-align: center;
 	margin: auto;
 }
+
+.post-excerpt p {
+	@media (max-width: 700px) {
+		font-size: 1.1em;
+	}
+}

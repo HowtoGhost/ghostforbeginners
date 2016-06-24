@@ -4,11 +4,19 @@
     attributes by default, but you can also customise it to behave differently if you prefer. }}
 
 <main class="content" role="main">
-
-<div class="wrapper flex-wrapper">
-    <div id="content" class="flex-content theme-content">
-        {{content}}
-    </div>
-    {{> "sidebar"}}   
-</div>
+{{#post}}
+	<div class="wrapper flex-wrapper">
+	    <div id="content" class="flex-content theme-content">
+	    	<article class="{{post_class}}">
+		    	<div class="post-wrapper">
+		            <div class="post-content">
+		            	{{!-- <h1 class="post-title">{{{title}}}</h1> --}}
+		        		{{content}}
+		        	</div>
+		        </div>
+	       	</article>
+	    </div>
+	    {{> "sidebar"}}   
+	</div>
+{{/post}}
 </main>
