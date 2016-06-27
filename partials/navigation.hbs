@@ -79,9 +79,6 @@
 
 <script type="text/javascript" src="{{asset "js/corejs-typeahead.js"}}"></script>
 <script>
-    $.get(ghost.url.api('posts', {limit: "all", fields: "slug,title"})).done(function(data) {
-        var searchData = data.posts; //add all the data to a variable
-    });
 
     //Wait for other things to be loaded so the site doesn't wait on the search
     $(document).ready(function() {

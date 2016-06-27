@@ -119,9 +119,8 @@
             margin: 0;
             a {
                 padding: 15px 5px;
-                ;
                 color: #3A4145;
-                line-height: 1;
+                line-height: 2rem;
                 &:hover {
                     background-color: #1D8076;
                     color: white;
@@ -134,7 +133,6 @@
         }
     }
     .tt-suggestion {
-        white-space: nowrap;
         a {
             @media (max-width: 768px) {
                 font-size: 1.75rem;
