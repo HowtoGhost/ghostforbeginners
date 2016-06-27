@@ -3,139 +3,162 @@
  */
 
 .post-content {
-
-	p {
-
-		margin: 1.6rem 0 0 0;
-		line-height: 1.6em;
-
-		img {
-			width: 70%;
-			margin: auto;
-		}
-
-		@media (max-width: 550px) {
-			font-size: 1.2em;
-		}
-	}
-
-	h1, h2, h3, h4, h5, h6 {
-		margin-top: 10px;
-		margin-bottom: 5px;
-	}
+    p {
+        margin: 1.6rem 0 0 0;
+        line-height: 1.6em;
+        img {
+            width: 70%;
+            margin: auto;
+        }
+        @media (max-width: 550px) {
+            font-size: 1.2em;
+        }
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
 }
+
 .post-content .full-img {
-	width: 70%;
-	margin: auto !important;
+    width: 70%;
+    margin: auto !important;
 }
+
 .post-title {
-	font-size: 3.5em;
-	text-align: center;
-	font-family: "Open Sans",sans-serif;
-	font-weight: 400;
+    font-size: 2em;
+    text-align: left;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    @media (max-width: 550px) {
+        font-size: 2.5em;
+    }
+}
 
-	@media (max-width: 550px) {
-		font-size: 2.5em;
-	}
-}
 .post-title-hr {
-	margin-top: 10px;
+    margin-top: 10px;
 }
+
 .post-meta {
-	margin-top: 15px;
-	width: 100%;
+    margin-top: 15px;
+    width: 100%;
+    @media (max-width: 500px) {
+        text-align: center;
+    }
 }
+
 .post-menu {
-	float: right;
-	width: 220px;
-	margin-top: 15px;
-	background-color: #2f8cde;
-	color: white;
-	padding-bottom: 15px;
+    float: right;
+    width: 220px;
+    margin-top: 15px;
+    background-color: #2f8cde;
+    color: white;
+    padding-bottom: 15px;
 }
+
 .post {
-	max-width: 800px;
-	width: auto; 
+    max-width: 800px;
+    width: auto;
 }
-.post-content .full-img {
-	margin: 0;
-	max-width: 100%;
-}
-.post-content img {
-	width: 70%;
+
+.post-content {
+    img {
+        width: 70%;
+    }
+    .post-img {
+        width: 90%;
+        max-width: 1000px;
+        margin-bottom: 15px;
+    }
+    .full-img {
+        margin: 0;
+        max-width: 100%;
+    }
 }
 
 .theme-table-image {
-	margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .theme-table-image a img {
-	width: 100%;
+    width: 100%;
 }
 
 #sharing-icons {
-	text-align: center;
-	padding-bottom: 20px;
+    text-align: center;
+    padding-bottom: 20px;
 }
 
-#twitter-share-post,#facebook-share-post {
-	height: 20px;
-	display: inline-block;
+#twitter-share-post,
+#facebook-share-post {
+    height: 20px;
+    display: inline-block;
 }
 
 .next-post-flex {
-	display: flex;
-	display: -webkit-flex;
-
-	.next-post-item {
-		flex: 1;
-		-webkit-flex: 1;
-		text-align: center;
-
-		a {
-			text-decoration: none;
-		}
-
-		.hosting-links {
-			padding: 10px;
-			background-color: #5BA4E5;
-			color: white;
-			width: 50%;
-			margin: auto;
-		}
-
-	}
+    display: flex;
+    display: -webkit-flex;
+    .next-post-item {
+        flex: 1;
+        -webkit-flex: 1;
+        text-align: center;
+        a {
+            text-decoration: none;
+        }
+        .hosting-links {
+            padding: 10px;
+            background-color: #5BA4E5;
+            color: white;
+            width: 50%;
+            margin: auto;
+        }
+    }
 }
 
 .post-next {
-	width: auto;
-	float: right;
-	margin-bottom: 20px;
-	background-color:#57A3E8;
+    width: auto;
+    float: right;
+    margin-bottom: 20px;
+    background-color: #57A3E8;
 }
 
 .post-next-inside p {
-	float: right;
-	vertical-align: middle;
-	margin: 0;
-	padding-left: 10px;
-	color: white;
+    float: right;
+    vertical-align: middle;
+    margin: 0;
+    padding-left: 10px;
+    color: white;
 }
-.post-next-img {
-	width:auto;
 
-	img {
-		width: 40px;
-		float: right;
-	}
+.post-next-img {
+    width: auto;
+    img {
+        width: 40px;
+        float: right;
+    }
 }
 
 .github-link {
- 	text-align: center;
-	padding-bottom: 15px;
+    text-align: center;
+    padding-bottom: 15px;
 }
 
 .github-link a {
-	padding: 5px;
-	border: 1px solid black;
- }
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.themedemo {
+    width: 100%;
+    height: 600px;
+}
+
+.post-index-image {
+    max-width: 90%;
+    max-height: 400px;
+}

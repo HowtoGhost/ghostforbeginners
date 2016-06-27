@@ -3,660 +3,112 @@
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
 
-{{! The big featured header on the homepage, with the site logo and description }}
-<header class="main-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
-    <div class="vertical">
-        <div class="site-head-content inner">
-            {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
-            <h1 class="blog-title">{{@blog.title}}</h1>
-            <h2 class="blog-description">{{@blog.description}}</h2>
-            <div class="getting-started"><a href="/hosting-and-installing-ghost">Get Started Here!</a></div>
-        </div>
-    </div>
-
-</header>
-
 {{! The main content area on the homepage }}
 <main class="content" role="main">
-    <div class="main-after-header">
-        <h2 class="define-header">What is Ghost for Beginners</h2>
-        <p class="define-content">Ghost for Beginners is here to help train and teach you how to use the Ghost blogging platform. Regardless of your technical prowess, Ghost for Beginners has all the information you need to know how to install, use, and manage your Ghost blog.<br><br>Ghost for Beginners is designed to be a step-by-step process, guiding you through Ghost from the beginning install, to how to fully manage your blog. If you are new to Ghost, go ahead and scroll down to the Getting Started section where we will teach you how to get Ghost installed. From there, you will be directed to learn more about Ghost and how to take advantage of all the great features this blogging platform has to offer.</p>
-        <br style="clear:both">
-    </div>
-    <div class="main-sections">
-        <div class="arrow-down"></div>
-        <div class="sections">
-            <h2 id="getting-started" class="sections-header">Getting Started</h2>
-            <div class="section-posts">
-                <a href="/hosting-and-installing-ghost">
-                    <div class="section-post">
-                        <table class="section-table">
-                            <tr>
-                                <td class="section-post-inside">
-                                    <h4 class="section-post-header">Where to Host and How to Install Ghost</h4>
-                                    <p class="section-post-paragraph">Which hosting company should you choose to host your Ghost blog and how to install it on that platform</p>
-                                </td>
-                                <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                            </tr>
-                        </table>
-                        <table class="start-here">
-                            <tr>
-                                <td id="new-to-ghost">New to Ghost? Start here!</td>
-                                <td><img src="{{asset "images/Arrow.png"}}"></img></td>
-                            </tr>
-                        </table>
+
+<div class="wrapper flex-wrapper">
+    <div id="content" class="flex-content home-content">
+        <div class="home-section flex-vertical">
+            <h3 class="home-header">Popular Guides</h3>
+            <div class="home-popular-container flex">
+                {{#get "posts" limit="2" page="1" filter="tag:home-page-guide"}}
+                    {{#foreach posts}}
+                    <a href="/{{slug}}" class="home-popular-item flex flex-one">
+                        <img class="home-popular-img" src="{{image}}">
+                        <div class="home-popular-desc">
+                            <div class="home-popular-title">{{title}}</div>
+                            <div class="home-popular-meta">{{meta_description}}</div>
+                        </div>
+                    </a>
+                    {{/foreach}}
+                {{/get}}
+            </div>
+            <div class="home-popular-container flex">
+                {{#get "posts" limit="2" page="2" filter="tag:home-page-guide"}}
+                    {{#foreach posts}}
+                    <a href="/{{slug}}" class="home-popular-item flex flex-one">
+                        <img class="home-popular-img" src="{{image}}">
+                        <div class="home-popular-desc">
+                            <div class="home-popular-title">{{title}}</div>
+                            <div class="home-popular-meta">{{meta_description}}</div>
+                        </div>
+                    </a>
+                    {{/foreach}}
+                {{/get}}
+            </div>
+            <div class="home-popular-container flex">
+                {{#get "posts" limit="2" page="3" filter="tag:home-page-guide"}}
+                    {{#foreach posts}}
+                    <a href="/{{slug}}" class="home-popular-item flex flex-one">
+                        <img class="home-popular-img" src="{{image}}">
+                        <div class="home-popular-desc">
+                            <div class="home-popular-title">{{title}}</div>
+                            <div class="home-popular-meta">{{meta_description}}</div>
+                        </div>
+                    </a>
+                    {{/foreach}}
+                {{/get}}
+            </div>
+        </div>
+        <div class="home-section flex-vertical">
+            <h3 class="home-header">Awesome Themes</h3>
+            <div class="home-themes-container flex">
+            {{#get "posts" limit="3" filter="tag:home-page-theme"}}
+                {{#foreach posts}}
+                <a href="/{{slug}}" class="home-theme-item flex-vertical flex-one">
+                    {{#if image}}
+                    <img class="home-theme-img" src="{{image}}">
+                    {{else}}
+                    <img class="home-theme-img" src='//cdn.allghostthemes.com/assets/images/{{title}}.jpg'>
+                    {{/if}}
+                    <div class="home-theme-desc">
+                        <div class="home-theme-title">{{title}}</div>
+                        <div class="home-theme-meta">{{meta_description}}</div>
                     </div>
                 </a>
-                <a href="/create-first-user">
-                    <div class="section-post">
-                        <table class="section-table">
-                            <tr>
-                                <td class="section-post-inside">
-                                    <h4 class="section-post-header">Create First User</h4>
-                                    <p class="section-post-paragraph">Creating your first Ghost user and logging in</p>
-                                </td>
-                                <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                            </tr>
-                        </table>
-                    </div>
-                </a>
-                <a href="create-and-write-first-post">
-                    <div class="section-post">
-                         <table class="section-table">
-                            <tr>
-                                <td class="section-post-inside">
-                                    <h4 class="section-post-header">Write Your First Post</h4>
-                                    <p class="section-post-paragraph">Create, write, and publish your first post on Ghost</p>
-                                </td>
-                                <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                            </tr>
-                        </table>
-                    </div>
-                </a>
+                {{/foreach}}
+            {{/get}}
             </div>
-
-            <div class="sections">
-                <h2 id="post-basics" class="sections-header">Post Basics</h2>
-                <div class="section-posts">
-                    <a href="/basic-markdown-for-ghost-blogs">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Basic Markdown</h4>
-                                        <p class="section-post-paragraph">Ghost uses Markdown for styling content. Learn how to use the Markdown syntax to make your content look great</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
+        </div>
+        <hr class="home-hr">
+        <div class="home-section flex home-articles-hosting">
+            <div class="home-articles-container flex-vertical flex-one">
+                <h3 class="home-header">Recent Articles</h3>
+                {{#get "posts" limit="4" include="author,tags" filter="tags:beginners,tags:developers,tags:blog"}}
+                    {{#foreach posts}}
+                    <a href="/{{slug}}" class="home-recent-item flex-vertical flex-one">
+                        <div class="home-recent-desc">
+                            <div class="home-recent-title">{{title}}</div>
+                            <div class="home-recent-meta">{{meta_description}}</div>
                         </div>
                     </a>
-                    <a href="/how-to-add-an-image-to-your-ghost-blog-post">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Add Image</h4>
-                                        <p class="section-post-paragraph">Learn how to insert an image into a post</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="/place-images-side-by-side">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Add Two Images Side by Side</h4>
-                                        <p class="section-post-paragraph">Learn how to add two images side by side in a post</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="how-to-embed-youtube-videos-in-ghost-blog-posts">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Add Video</h4>
-                                        <p class="section-post-paragraph">Learn how to add a video inside of a post</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="how-to-publish-a-page-on-your-ghost-blog">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Static Pages</h4>
-                                        <p class="section-post-paragraph">What is a static page and how to make one</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="how-to-categorize-ghost-blog-posts-with-tags">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Tags</h4>
-                                        <p class="section-post-paragraph">What tags are and how they are used on posts and pages</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="how-to-edit-a-ghost-blog-posts-url-permalink">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Custom Post URLs</h4>
-                                        <p class="section-post-paragraph">Create a custom url for a post or a page</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="how-to-add-a-featured-post">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Featured Post</h4>
-                                        <p class="section-post-paragraph">Learn how to add a featured post</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    {{!-- Not Released Yet --}}
-                    {{!-- <div class="section-post">
-                        <table class="section-table">
-                            <tr>
-                                <td class="section-post-inside">
-                                    <h4 class="section-post-header">Future Publishing</h4>
-                                    <p class="section-post-paragraph">Set a future date and time for when you want the post to be published</p>
-                                </td>
-                                <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                            </tr>
-                        </table>
-                    </div> --}}
-                </div>
+                    {{/foreach}}
+                {{/get}}
             </div>
-
-             <div class="sections">
-                <h2 id="managing-ghost" class="sections-header">Managing Ghost</h2>
-                <div class="section-posts">
-                    <a href="ghost-multi-user-overview">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Ghost Multi-User Overview</h4>
-                                        <p class="section-post-paragraph">An overview of the different roles each user can have</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
+            <div class="vertical-hr"></div>
+            <div class="home-hosting-container flex-vertical">
+                <h3 class="home-header home-hosting-header">The Best Ghost Hosting</h3>
+                <div class="home-hosting-hosts">
+                    <a href="how-to-host-ghost-on-ghost-org" class="home-hosting-item flex-vertical flex-one">
+                        <div class="home-hosting-img">
+                            <img src="{{asset "images/GhostPro_logo.png"}}">
+                        </div>
+                        <div class="home-hosting-desc">
+                            <div class="home-hosting-meta">Host Ghost with the creaters themselves. Get amazing hosting and support the project at the same time!</div>
                         </div>
                     </a>
-                    <a href="inviting-new-users">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Inviting New Users</h4>
-                                        <p class="section-post-paragraph">Learn how to invite new users to access your blog</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
+                    <a href="how-to-host-ghost-on-ghost-org" class="home-hosting-item flex-vertical flex-one">
+                        <div class="home-hosting-img">
+                            <img src="{{asset "images/DigitalOcean_logo.png"}}">
                         </div>
-                    </a>
-                    <a href="changing-user-permissions">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Change User Permissions</h4>
-                                        <p class="section-post-paragraph">Learn how to change the permissions on an existing Ghost user</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="changing-owner-user">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Changing the Owner</h4>
-                                        <p class="section-post-paragraph">Learn how to change who is the Owner user</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="managing-ghost-tags">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Manage Ghost Tags</h4>
-                                        <p class="section-post-paragraph">How to manage your tags</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="ghost-custom-domain-name">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Custom Domain URL</h4>
-                                        <p class="section-post-paragraph">Setup a custom domain name for your Ghost blog</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="change-ghost-pagination">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Change Pagination</h4>
-                                        <p class="section-post-paragraph">Change the number of posts shown before needing to click 'next'</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            
-             <div class="sections">
-                <h2 id="migrating-to-ghost" class="sections-header">Migrating to Ghost</h2>
-                <div class="section-posts">
-                    <a href="how-to-transfer-blog-posts-from-wordpress-to-ghost">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Wordpress</h4>
-                                        <p class="section-post-paragraph">Learn how to migrate your Wordpress blogs over to Ghost</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="how-to-import-blog-posts-from-tumblr-to-ghost">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Tumblr</h4>
-                                        <p class="section-post-paragraph">Learn how to migrate your Tumblr blog over to Ghost</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="how-to-transfer-blog-posts-from-blogger-to-ghost">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Blogger</h4>
-                                        <p class="section-post-paragraph">Learn how to migrate your Blogger blog over to Ghost</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="sections">
-                <h2 id="finding-and-uploading-a-theme" class="sections-header">Finding and Uploading a Theme</h2>
-                <a href="where-to-find-a-ghost-theme">
-                    <div class="section-posts">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Where to Find a Theme</h4>
-                                        <p class="section-post-paragraph">Learn the best places to find a theme that fits the needs of your blog</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="how-to-upload-a-theme">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">How to Upload a Theme</h4>
-                                        <p class="section-post-paragraph">Learn how to upload and use your new Ghost theme</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="sections">
-                <h2 id="backing-up-ghost" class="sections-header">Search Engine Optimization</h2>
-                <div class="section-posts">
-                    <a href="ghost-sitemap">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Ghost Sitemap</h4>
-                                        <p class="section-post-paragraph">Ghost sitemap location, explanation, and submission</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="adding-a-custom-meta-title-and-description">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Custom Meta Data</h4>
-                                        <p class="section-post-paragraph">How to set a custom metadata title and description</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="how-to-add-google-analytics-to-ghost">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Google Analytics</h4>
-                                        <p class="section-post-paragraph">Insert Google Analytics into your Ghost blog to track visitors</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="add-google-webmaster-tools-to-ghost">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Google Webmaster Tools</h4>
-                                        <p class="section-post-paragraph">Setup Google Webmaster Tools to see how people are getting to your site</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="sections">
-                <h2 id="backing-up-ghost" class="sections-header">Backing Up Ghost</h2>
-                <div class="section-posts">
-                    <a href="backup-ghost-using-admin-ui">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Ghost Export UI</h4>
-                                        <p class="section-post-paragraph">See how to backup your Ghost blog using the Ghost admin page</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="how-to-back-up-your-entire-ghost-blog">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Backup Entire Ghost Blog</h4>
-                                        <p class="section-post-paragraph">Learn how to backup your entire Ghost blog</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="sections">
-                <h2 id="more-information" class="sections-header">More Information</h2>
-                <div class="section-posts">
-                    <a href="how-to-update-ghost">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Update Ghost</h4>
-                                        <p class="section-post-paragraph">How to update Ghost to the latest version</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="customized-ghost-setup">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Customized Setup</h4>
-                                        <p class="section-post-paragraph">Where to get help if you have a setup not covered on this site</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="future-ghost-updates">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Future Ghost Updates</h4>
-                                        <p class="section-post-paragraph">Where to find information on the future updates and releases of Ghost</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="where-to-get-help">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Where to Get Help</h4>
-                                        <p class="section-post-paragraph">Where to go to get help with any problems you are having</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="where-to-meet-others">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Meet Others</h4>
-                                        <p class="section-post-paragraph">How and where to meet others in the community</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="sections">
-                <h2 id="extras" class="sections-header">Extras</h2>
-                <div class="section-posts">
-                    <a href="add-contact-form-to-ghost-using-formspree">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Add Contact Form using Formspree</h4>
-                                        <p class="section-post-paragraph">Add a contact form to your site using Formspree</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="adding-a-contact-form-to-ghost-with-wufoo">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Add Contact Form using WuFoo</h4>
-                                        <p class="section-post-paragraph">Add a contact form to your site using WuFoo</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="install-sumome-on-ghost">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Add SumoMe to Ghost</h4>
-                                        <p class="section-post-paragraph">Add the SumoMe toolset to your Ghost blog</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="how-to-embed-google-maps-in-ghost">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Embed Google Maps</h4>
-                                        <p class="section-post-paragraph">Embed Google Maps into one of your posts or pages</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="how-to-embed-tweets-into-ghost-blog-posts">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Embed Tweets into Posts</h4>
-                                        <p class="section-post-paragraph">Embed tweets into a Ghost post</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="how-to-embed-facebook-statuses-in-ghost-blog-posts">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Embed Facebook Statuses into Posts</h4>
-                                        <p class="section-post-paragraph">Embed a Facebook status into a Ghost post</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="list-of-web-hosts-for-ghost">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">List of Other Hosting Options</h4>
-                                        <p class="section-post-paragraph">Where else can you host Ghost besides what is covered on this website</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="reset-your-ghost-password">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Reset Password</h4>
-                                        <p class="section-post-paragraph">How to reset your password if you forgot it</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </a>
-                    <a href="how-to-publish-a-rss-feed-like-feedburner-for-your-ghost-blog">
-                        <div class="section-post">
-                            <table class="section-table">
-                                <tr>
-                                    <td class="section-post-inside">
-                                        <h4 class="section-post-header">Feedburner RSS</h4>
-                                        <p class="section-post-paragraph">Setup an Feedburner RSS feed</p>
-                                    </td>
-                                    <td class="section-post-image"><img src="{{asset "images/right_arrow.png"}}"></img></td>
-                                </tr>
-                            </table>
+                        <div class="home-hosting-desc">
+                            <div class="home-hosting-meta">Host your Ghost blog where we do. Fast, cheap, flexible. Get $10 off by going through our link.</div>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
     </div>
-<br>
-<br>
+    {{> "sidebar"}}    
+</div>
 </main>

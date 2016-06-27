@@ -1,0 +1,109 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+<main class="content" role="main">
+
+<div class="wrapper flex-wrapper">
+    <div id="content" class="flex-content theme-content">
+        {{!-- {{content}} --}}
+        <h2 id="where" class="center beginner-header" style="margin:0;">Where should you host?</h2>
+        <div class="beginners-flex flex">
+            <a href="/how-to-host-ghost-on-ghost-org/" class="beginners-link flex-vertical">
+                <div class="beginners-images beginners-hosting-images flex">
+                    <img src="{{asset "/images/GhostPro_logo.png"}}">
+                </div>
+                <div class="hosting-desc">Ghost(Pro) is our most recommended platform. With Ghost(Pro), there are no worries other than writing on your blog. They take care of the updates, backups, maintenance, security, and performance for you. On top of amazing performance and service, you also help fund the Ghost project by hosting here.</div>
+            </a>
+            <a href="/how-to-install-ghost-on-digitalocean/" class="beginners-link flex-vertical">
+                <div class="beginners-images beginners-hosting-images flex">
+                    <img src="{{asset "/images/DigitalOcean_logo.png"}}">
+                </div>
+                <div class="hosting-desc">DigitalOcean is where we host Ghost for Beginners and is one of the cheapest and most relaible places to host your blog. It does take some more work as you need to perform all the maintenance, updates, backups, etc yourself, but if your comfortable with using command line or have managed servers before, DigitalOcean is incredible.</div>
+            </a>
+        </div>
+        <h2 id="learn" class="center beginner-header">Learn the Ghost basics</h2>
+        <div class="beginners-flex flex">
+            <a href="/basic-markdown-for-ghost-blogs/" class="beginners-link flex-vertical flex-one">
+                <img class="beginners-images" src="{{asset "/images/Basic Markdown.jpg"}}">
+                <div class="hosting-title">Basic Markdown</div>
+                <div class="hosting-desc">Learn how to use markdown so you can quickly and efficiently write on your blog.</div>
+            </a>
+            <a href="/how-to-add-an-image-to-your-ghost-blog-post/" class="beginners-link flex-vertical flex-one">
+                <img class="beginners-images" src="{{asset "/images/Add Images to Ghost Blog Posts Smaller.jpg"}}">
+                <div class="hosting-title">Add Images to your Posts</div>
+                <div class="hosting-desc">Easily add images to your blog post to keep your readers engaged or show off your photos.</div>
+            </a>
+            <a href="/how-to-categorize-ghost-blog-posts-with-tags/" class="beginners-link flex-vertical flex-one">
+                <img class="beginners-images" src="{{asset "/images/Categorize Blog Posts with Tags Smaller.jpg"}}">
+                <div class="hosting-title">Categorize your Posts with Tags</div>
+                <div class="hosting-desc">Add tags to your posts to group them together for visitors who are looking for specific content.</div>
+            </a>
+        </div>
+        <h2 id="move" class="center beginner-header">Move your old blog's data over</h2>
+        <div class="beginners-flex flex">
+            <a href="/migrating-your-wordpress-blog-to-ghost/" class="beginners-link flex-vertical flex-one">
+                <img class="beginners-images" src="{{asset "images/wordpress to ghost.jpg"}}">
+                <div class="hosting-title">Wordpress to Ghost</div>
+                <div class="hosting-desc">Move all of your blog's content from the Wordpress platform over to Ghost.</div>
+            </a>
+            <a href="/how-to-import-blog-posts-from-tumblr-to-ghost/" class="beginners-link flex-vertical flex-one">
+                <img class="beginners-images" src="{{asset "images/tumblr to ghost.jpg"}}">
+                <div class="hosting-title">Tumblr to Ghost</div>
+                <div class="hosting-desc">Migrate your content from Tumblr over to your new Ghost blog.</div>
+            </a>
+            <a href="/how-to-transfer-blog-posts-from-blogger-to-ghost/" class="beginners-link flex-vertical flex-one">
+                <img class="beginners-images" src="{{asset "images/blogger to ghost.jpg"}}">
+                <div class="hosting-title">Blogger to Ghost</div>
+                <div class="hosting-desc">Take your posts from Blogger over to your newly created Ghost blog.</div>
+            </a>
+        </div>
+        <h2 id="theme" class="center beginner-header">Find a nice theme</h2>
+        <div class="beginners-flex flex">
+            <a href="/themes" class="beginners-link flex-vertical flex-one">
+                <img class="beginners-images" src="{{asset "images/Ghost for Beginners Themes.jpg"}}">
+                <div class="hosting-title">Ghost for Beginners Theme Section</div>
+                <div class="hosting-desc">We have looked at hundreds of themes and put them in an easy to view format so you can quickly and easily look through them to find the one that suits your needs the best.</div>
+            </a>
+            <a href="http://themeforest.net/category/blogging/ghost-themes?ref=howtoinstallghost" class="beginners-link flex-vertical flex-one">
+                <img class="beginners-images" src="{{asset "images/Themeforest.jpg"}}">
+                <div class="hosting-title">Themeforest</div>
+                <div class="hosting-desc">Themeforest is the best place to purchase premium themes for your Ghost blog.</div>
+            </a>
+            <a href="http://marketplace.ghost.org" class="beginners-link flex-vertical flex-one">
+                <img class="beginners-images" src="{{asset "images/Ghost.jpg"}}">
+                <div class="hosting-title">Ghost Marketplace</div>
+                <div class="hosting-desc">The Ghost marketplace is a huge list of themes submitted by the authors and a great place to go looking for a new theme.</div>
+            </a>
+        </div>
+        <h2 id="edit-theme" class="center beginner-header">Learn to edit your theme</h2>
+        <div class="beginners-flex flex">
+            <a href="/ghost-theme-structure/" class="beginners-link flex-vertical flex-one">
+                <img class="beginners-images" src="{{asset "/images/Ghost Theme Basics Smaller.jpg"}}">
+                <div class="hosting-title">Theme Basics</div>
+                <div class="hosting-desc">Learn about how Ghost themes are structured and what each file's role is in creating a beautiful looking website.</div>
+            </a>
+            <a href="/how-to-enable-comments-on-a-ghost-blog/" class="beginners-link flex-vertical flex-one">
+                <img class="beginners-images" src="{{asset "/images/Add Comments to Ghost Smaller.jpg"}}">
+                <div class="hosting-title">Enable Comments on your Blog</div>
+                <div class="hosting-desc">Learn how to add comments to your Ghost blog to allow feedback and conversations from your community.</div>
+            </a>
+            <a href="/how-to-add-google-analytics-to-ghost/" class="beginners-link flex-vertical flex-one">
+                <img class="beginners-images" src="{{asset "/images/Google Analytics on Ghost Smaller.jpg"}}">
+                <div class="hosting-title">Add Google Analytics</div>
+                <div class="hosting-desc">Instructions on how to add Google Analytics to your Ghost blog so you can keep track of your traffic and other important site metrics.</div>
+            </a>
+        </div>
+        <h2 id="more-info" class="center beginner-header">Even more information</h2>
+        <div class="beginners-flex flex">
+            <a href="/ebook" class="beginners-link flex-vertical ebook-beginners-link">
+                <img class="beginners-images ebook-beginners-image" src="{{asset "images/howtoghost_2.jpg"}}">
+                <div class="hosting-title">Ghost for Beginners eBook</div>
+                <div class="hosting-desc">We have put together an eBook that goes through everything you need to know to get started using Ghost. We cover all the information above and more including how to backup the data on your blog, manage your users, and many more customizations. Head here to check out the eBook and get the first two chapters for free.</div>
+            </a>
+        </div>
+    </div>
+    {{> "sidebar"}}   
+</div>
+</main>

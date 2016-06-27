@@ -1,0 +1,48 @@
+/*
+ * Styles for the GFB Beginners  Page
+ */
+
+.beginners-link {
+    text-decoration: none;
+    margin: 15px;
+    .beginners-images {
+        width: 80%;
+        margin: 0 auto 10px;
+        img {
+            margin: auto;
+        }
+    }
+    .hosting-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    .hosting-desc {
+        // font-size: 2rem;
+        font-family: "Open Sans", sans-serif;
+    }
+}
+
+.beginner-header {
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+
+.beginners-hosting-images {
+    max-width: 75%;
+    height: 150px;
+}
+
+.ebook-beginners-link {
+    margin: 10px auto;
+    width: 60%;
+    .hosting-title {
+        height: auto;
+    }
+}
+
+@media (max-width: 650px) {
+	.beginners-flex {
+		flex-direction: column;
+	}
+}
