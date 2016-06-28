@@ -11,6 +11,9 @@
 		    	<div class="post-wrapper">
 		            <div class="post-content">
 		            	{{!-- <h1 class="post-title">{{{title}}}</h1> --}}
+		            	{{#if image}}
+                            <img class="post-img" src="{{image}}">
+                        {{/if}}
 		        		{{content}}
 		        	</div>
 		        </div>
