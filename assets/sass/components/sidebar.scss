@@ -103,6 +103,9 @@
 }
 
 .sidebar-ebook {
+    a {
+        text-decoration: none;
+    }
     .ebook-text {
         font-family: 'Open Sans', sans-serif;
         font-weight: 300;
