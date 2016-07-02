@@ -1,6 +1,6 @@
 //JS to initialize both of the datatables instances
 function datatableInitialize(tagPage) {
-    var tagFilter = "tag:-blog";
+    var tagFilter = "tag:theme";
     if (typeof(tagPage) !== "undefined") {
         tagFilter = "tag:" + tagPage;
     }
