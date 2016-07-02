@@ -22,7 +22,7 @@ function datatableInitialize(tagPage) {
             //Save new data as the html variable
             json.posts[i].html = descSlice;
             //encode url into hidden div that then gets replaced on the init below
-            if (json.posts[i].image === null) {
+            if (json.posts[i].image === "") {
                 json.posts[i].image = "<a href='" + json.posts[i].url + "'><img src='//cdn.allghostthemes.com/assets/images/" + encodeURI(json.posts[i].title) + ".jpg' /></a>";
             } else {
                 json.posts[i].image = "<a href='" + json.posts[i].url + "'><img src='" + encodeURI(json.posts[i].image) + "' /></a>";
