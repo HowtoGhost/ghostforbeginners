@@ -45,10 +45,24 @@
                             </script>
                         </section>
                         <hr class="post-title-hr">
-                        {{#if image}}
-                            <img class="post-img" src="{{image}}">
-                        {{/if}}
+                        {{#has tag="theme"}}
+                        {{else}}
+                            {{#if image}}
+                                <img class="post-img" src="{{image}}">
+                            {{/if}}
+                        {{/has}}
                         {{content}}
+
+                        {{#has tag="theme"}}
+                            <script>
+                                var demo = $('.themedemo').attr('src');
+                                if (demo != undefined) {
+                                    $('.post-content h3').append(" - <a class='demoLink' target='_blank' href='"+demo+"'>Demo</a>");
+                                }
+
+                                $('.dowloadLink, moneyLink').attr('target','_blank'); //Adding open in new tab to download/purchase link
+                            </script>
+                        {{/has}}
 
                         <div id="sharing-icons" style="margin-top:25px;">
                             <span class='st_facebook_large' displayText='Facebook'></span>
