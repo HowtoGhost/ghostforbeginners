@@ -3,74 +3,82 @@
  */
 
 body {
-	font-size: 1.7rem;
+    font-size: 1.7rem;
 }
 
 .flex-wrapper {
-	display: flex;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-  	justify-content: center;
-  	-webkit-justify-content: center;
-  	flex-wrap: wrap;
-  	-webkit-flex-wrap: wrap;
-
-  	@media (max-width: 800px) {
-  		flex-direction: column;
-  		-webkit-flex-direction: column;
-  	}
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    justify-content: center;
+    -webkit-justify-content: center;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    @media (max-width: 800px) {
+        flex-direction: column;
+        -webkit-flex-direction: column;
+    }
 }
 
 .flex-content {
-	flex: 3;
-	-webkit-flex: 3;
-	-ms-flex: 3 0 auto;
-	padding-left: 25px;
-	max-width: 95%;
-
-	@media (max-width: 550px) {
-		padding-left: 5px;
-	}
-
-	img {
-		max-width: 90%;
-	}
+    flex: 3;
+    -webkit-flex: 3;
+    -ms-flex: 3 0 auto;
+    padding-left: 25px;
+    max-width: 95%;
+    @media (max-width: 768px) {
+        flex: 1 0 auto;
+        -webkit-flex: 1 0 auto;
+    }
+    @media (max-width: 550px) {
+        padding-left: 5px;
+    }
+    img {
+        max-width: 90%;
+    }
 }
 
 .flex {
-	display: flex;
-	display: -webkit-flex;
-	display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
 }
 
 .flex-vertical {
-	display: flex;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	flex-direction: column;
-	-webkit-flex-direction: column;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
 }
 
 .flex-one {
-	flex: 1;
-	-webkit-flex: 1;
-	-ms-flex: 1 0 auto;
+    flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1 0 auto;
+    @media (max-width: 768px) {
+        flex: 1 0 auto;
+        -webkit-flex: 1 0 auto;
+    }
 }
 
 .flex-center {
-	align-items: center;
-	-webkit-align-items: center;
-	justify-content: center;
-	-webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
 }
 
 .center {
-	text-align: center;
-	margin: auto;
+    text-align: center;
+    margin: auto;
 }
 
 .post-excerpt p {
-	@media (max-width: 700px) {
-		font-size: 1.1em;
-	}
+    @media (max-width: 700px) {
+        font-size: 1.1em;
+    }
 }
