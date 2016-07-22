@@ -44,5 +44,6 @@
 @media (max-width: 650px) {
 	.beginners-flex {
 		flex-direction: column;
+        -webkit-flex-direction: column;
 	}
 }
