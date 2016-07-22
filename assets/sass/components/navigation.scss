@@ -32,6 +32,7 @@
 .nav-brand-flex {
     flex: 2;
     -webkit-flex: 2;
+    -ms-flex: 2 0 auto;
     height: 100%;
     text-decoration: none;
     color: white;
@@ -186,6 +187,7 @@
     #guide-arrow {
         flex: .5;
         -webkit-flex: .5;
+        -ms-flex: .5 0 auto;
         img {
             width: 50px;
             transition: transform 1s ease-in-out;

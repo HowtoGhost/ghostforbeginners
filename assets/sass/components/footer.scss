@@ -38,6 +38,7 @@
 .footer-wrapper {
 	flex: 1;
 	-webkit-flex: 1;
+	-ms-flex: 1 0 auto;
 
 	.footer-hr {
 		margin: 25px;
