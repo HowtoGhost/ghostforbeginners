@@ -5,6 +5,7 @@
 .site-footer {
 	display: flex;
 	display: -webkit-flex;
+	display: -ms-flexbox;
 	flex-wrap: wrap;
 	-webkit-flex-wrap: wrap;
 	padding-top: 20px;

@@ -9,6 +9,7 @@ body {
 .flex-wrapper {
 	display: flex;
 	display: -webkit-flex;
+	display: -ms-flexbox;
   	justify-content: center;
   	-webkit-justify-content: center;
   	flex-wrap: wrap;
@@ -38,11 +39,13 @@ body {
 .flex {
 	display: flex;
 	display: -webkit-flex;
+	display: -ms-flexbox;
 }
 
 .flex-vertical {
 	display: flex;
 	display: -webkit-flex;
+	display: -ms-flexbox;
 	flex-direction: column;
 	-webkit-flex-direction: column;
 }
@@ -50,6 +53,7 @@ body {
 .flex-one {
 	flex: 1;
 	-webkit-flex: 1;
+	-ms-flex: 1;
 }
 
 .flex-center {

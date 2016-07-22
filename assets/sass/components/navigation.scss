@@ -40,6 +40,7 @@
         -webkit-align-self: center;
         display: flex;
         display: -webkit-flex;
+        display: -ms-flexbox;
         #nav-site-title {
             align-self: center;
             font-size: 2rem;

@@ -9,6 +9,7 @@
 .dataTables_filter {
 	flex: 1;
 	-webkit-flex: 1;
+	-ms-flex: 1;
 }
 
 #indexTable_info {
@@ -129,6 +130,7 @@ tbody .tableImage {
 .datatables-flex {
 	display: flex;
 	display: -webkit-flex;
+	display: -ms-flexbox;
 	flex-wrap: wrap-reverse;
 	-webkit-flex-wrap: wrap-reverse;
 
@@ -145,6 +147,7 @@ tbody .tableImage {
 .dataTables_info {
 	flex: 1;
 	-webkit-flex: 1;
+	-ms-flex: 1;
     font-size: 20px;
     font-weight: bold;
     float: none;
