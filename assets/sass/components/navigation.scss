@@ -30,9 +30,9 @@
 }
 
 .nav-brand-flex {
-    flex: 2 1 0%;
-    -webkit-flex: 2 1 0%;
-    -ms-flex: 2 1 0%;
+    flex: 2 1 auto;
+    -webkit-flex: 2 1 auto;
+    -ms-flex: 2 1 auto;
     height: 100%;
     text-decoration: none;
     color: white;
@@ -185,9 +185,9 @@
         }
     }
     #guide-arrow {
-        flex: .5 1 0%;
-        -webkit-flex: .5 1 0%;
-        -ms-flex: .5 1 0%;
+        flex: .5 1 auto;
+        -webkit-flex: .5 1 auto;
+        -ms-flex: .5 1 auto;
         img {
             width: 50px;
             transition: transform 1s ease-in-out;

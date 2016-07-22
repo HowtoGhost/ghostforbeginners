@@ -7,9 +7,9 @@
 }
 
 .dataTables_filter {
-	flex: 1 1 0%;
-	-webkit-flex: 1 1 0%;
-	-ms-flex: 1 1 0%;
+	flex: 1 1 auto;
+	-webkit-flex: 1 1 auto;
+	-ms-flex: 1 1 auto;
 }
 
 #indexTable_info {
@@ -145,9 +145,9 @@ tbody .tableImage {
 }
 
 .dataTables_info {
-	flex: 1 1 0%;
-	-webkit-flex: 1 1 0%;
-	-ms-flex: 1 1 0%;
+	flex: 1 1 auto;
+	-webkit-flex: 1 1 auto;
+	-ms-flex: 1 1 auto;
     font-size: 20px;
     font-weight: bold;
     float: none;
