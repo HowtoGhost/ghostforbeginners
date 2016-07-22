@@ -22,9 +22,9 @@ body {
 }
 
 .flex-content {
-	flex: 3;
-	-webkit-flex: 3;
-	-ms-flex: 3 0 auto;
+	flex: 3  1 0%;
+	-webkit-flex: 3  1 0%;
+	-ms-flex: 3 1 0%;
 	padding-left: 25px;
 	max-width: 95%;
 
@@ -52,9 +52,9 @@ body {
 }
 
 .flex-one {
-	flex: 1;
-	-webkit-flex: 1;
-	-ms-flex: 1 0 auto;
+	flex: 1 1 0%;
+	-webkit-flex: 1 1 0%;
+	-ms-flex: 1 1 0%;
 }
 
 .flex-center {

@@ -105,9 +105,9 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     .next-post-item {
-        flex: 1;
-        -webkit-flex: 1;
-        -ms-flex: 1 0 auto;
+        flex: 1 1 0%;
+        -webkit-flex: 1 1 0%;
+        -ms-flex: 1 1 0%;
         text-align: center;
         a {
             text-decoration: none;
