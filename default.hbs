@@ -13,12 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="shortcut icon" href="{{asset "images/favicon.ico"}}">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,600,400,300|Source+Sans+Pro|Ubuntu" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
-    <link rel="stylesheet" type="text/css" href="{{asset "bower_components/remodal/dist/remodal.css"}}" />
-    <link rel="stylesheet" type="text/css" href="{{asset "bower_components/remodal/dist/remodal-default-theme.css"}}" />
     <script type="text/javascript" src={{asset "bower_components/jquery/dist/jquery.min.js"}}></script>
-    <link rel="stylesheet" type="text/css" href="{{asset "bower_components/fluidbox/css/fluidbox.css"}}" />
     
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
@@ -38,7 +34,11 @@
 
     {{! Styles'n'Scripts }}
 
-    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,600,400,300|Source+Sans+Pro|Ubuntu" />
+    <link rel="stylesheet" type="text/css" href="{{asset "bower_components/fluidbox/css/fluidbox.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "bower_components/remodal/dist/remodal.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "bower_components/remodal/dist/remodal-default-theme.css"}}" />
+
     <script type="text/javascript" src={{asset "bower_components/fluidbox/jquery.fluidbox.min.js"}}></script>
     <script type="text/javascript" async src={{asset "bower_components/remodal/dist/remodal.min.js"}}></script>
     <script>
