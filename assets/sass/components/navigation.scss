@@ -133,6 +133,12 @@
                     color: white;
                 }
             }
+            &.tt-cursor {
+                a {
+                    background-color: #1D8076;
+                    color: white;
+                }
+            }
         }
         @media (max-width: 768px) {
             left: calc(20% - 5px);

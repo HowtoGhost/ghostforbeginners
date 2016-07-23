@@ -1,7 +1,7 @@
 <div id="nav-container">
     <div id="nav-announcement">
         <ul class="announcement-flex flex">
-            <a  class="nav-brand-flex flex" href={{@blog.url}}>
+            <a class="nav-brand-flex flex" href={{@blog.url}}>
                 <li>
                     <img alt="Ghost for Beginners Brand Logo" src="{{asset "images/icons/how-to-ghost_brand.png"}}" \>
                     <div id="nav-site-title">{{@blog.title}}</div>
@@ -25,14 +25,13 @@
             <li class="flex-one top-menu-items flex">
                 <a href="/themes" class="flex flex-center">
                     <img alt="Themes List Logo" src="{{asset "images/icons/how-to-install-ghost_logo.svg"}}"/>Themes List
-                    </a>
+                </a>
             </li>
             <li id="site-search" class="flex-one top-menu-items flex" style="display:none;">
                 <input class="typeahead" type="text" placeholder="Search">
             </li>
         </ul>
     </div>
-
     <div id="guides-nav">
         <a href="/beginners" class="guides-flex flex">
             <li id="guides-main" class="flex flex-one flex-center">
@@ -48,21 +47,20 @@
             </li>
         </a>
     </div>
-
     <script>
-        // $('.guides-flex').click(function() {
-        //     if ($('#guide-arrow img').css("transform") === "none") {
-        //         $('#guide-arrow img').css("transform", "rotate(90deg)");
-        //         $('.main-nav').slideDown(1000);
-        //     } else {
-        //         $('#guide-arrow img').css("transform", "");
-        //         $('.main-nav').slideUp(1000);
-        //     }
-            
-        // });
-    </script>
+    // $('.guides-flex').click(function() {
+    //     if ($('#guide-arrow img').css("transform") === "none") {
+    //         $('#guide-arrow img').css("transform", "rotate(90deg)");
+    //         $('.main-nav').slideDown(1000);
+    //     } else {
+    //         $('#guide-arrow img').css("transform", "");
+    //         $('.main-nav').slideUp(1000);
+    //     }
 
-    {{!-- <div class="main-nav">
+    // });
+    </script>
+    {{!--
+    <div class="main-nav">
         <div class="main-nav-flex flex">
             <li class="flex flex-one flex-center">
                 Host Ghost
@@ -76,54 +74,61 @@
         </div>
     </div> --}}
 </div>
-
 <script>
-    //Wait for other things to be loaded so the site doesn't wait on the search
-    $(document).ready(function() {
-        //Go grab the typeahead script
-        $.getScript("/assets/js/corejs-typeahead.min.js", function() {
-            //Go grab all the posts on the blog, but only the slug and title fields
-            //That helps limit the amount of data sent and stored locally
-            $.get(ghost.url.api('posts', {limit: "all", fields: "slug,title"})).done(function(data) {
-                //add all the data returned to a variable
-                var searchData = data.posts; 
+//Wait for other things to be loaded so the site doesn't wait on the search
+$(document).ready(function() {
+    //Go grab the typeahead script
+    $.getScript("/assets/js/corejs-typeahead.min.js", function() {
+        //Go grab all the posts on the blog, but only the slug and title fields
+        //That helps limit the amount of data sent and stored locally
+        $.get(ghost.url.api('posts', {
+            limit: "all",
+            fields: "slug,title"
+        })).done(function(data) {
+            //add all the data returned to a variable
+            var searchData = data.posts;
 
-                //New bloodhound to make it searchable
-                var search = new Bloodhound({
-                  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
-                  queryTokenizer: Bloodhound.tokenizers.whitespace,
-                  local: searchData
-                });
-
-                //Build the typeahead
-                $('#site-search .typeahead').typeahead({
-                    hint: false,
-                    highlight: true,
-                    minLength: 1,
-                    limit: 10
-                }, {
-                    name: 'search',
-                    //source is the bloodhound variable
-                    source: search,
-                    limit: 10,
-                    templates: {
-                        empty: [
-                            '<div class="empty-message">',
-                            'unable to find any post that match the current query',
-                            '</div>'
-                        ].join('\n'),
-                        suggestion: function(data) {
-                            return '<p class="flex"><a href=/' + data.slug + '>' + data.title + '</a></p>';
-                        }
-                    }
-                }); 
-
-                //Now show the search bar since getting data was successful
-                $('#site-search').show();
-            }).fail(function() {
-                //If the get request errors out, put an error in the console
-                console.log("Error getting Ghost API Data");
+            //New bloodhound to make it searchable
+            var search = new Bloodhound({
+                datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
+                queryTokenizer: Bloodhound.tokenizers.whitespace,
+                local: searchData
             });
+
+            //Build the typeahead
+            $('#site-search .typeahead').typeahead({
+                hint: false,
+                highlight: true,
+                minLength: 1,
+                limit: 10
+            }, {
+                name: 'search',
+                //source is the bloodhound variable
+                source: search,
+                displayKey: 'title',
+                limit: 10,
+                templates: {
+                    empty: [
+                        '<div class="empty-message">',
+                        'unable to find any post that match the current query',
+                        '</div>'
+                    ].join('\n'),
+                    suggestion: function(data) {
+                        return '<p class="flex"><a href=/' + data.slug + '>' + data.title + '</a></p>';
+                    }
+                }
+            });
+
+            //Now show the search bar since getting data was successful
+            $('#site-search').show();
+        }).fail(function() {
+            //If the get request errors out, put an error in the console
+            console.log("Error getting Ghost API Data");
         });
     });
+    //When an item is selected in the typeahead, go to that page
+    $('#site-search input.typeahead').on('typeahead:selected', function(event, selection) {
+        window.location.href = '/' + selection.slug;
+    });
+});
 </script>
