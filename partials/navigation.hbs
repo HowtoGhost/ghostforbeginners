@@ -77,52 +77,53 @@
     </div> --}}
 </div>
 
-<script type="text/javascript" src="{{asset "js/corejs-typeahead.min.js"}}"></script>
 <script>
-
     //Wait for other things to be loaded so the site doesn't wait on the search
     $(document).ready(function() {
-        //Go grab all the posts on the blog, but only the slug and title fields
-        //That helps limit the amount of data sent and stored locally
-        $.get(ghost.url.api('posts', {limit: "all", fields: "slug,title"})).done(function(data) {
-            //add all the data returned to a variable
-            var searchData = data.posts; 
+        //Go grab the typeahead script
+        $.getScript("/assets/js/corejs-typeahead.min.js", function() {
+            //Go grab all the posts on the blog, but only the slug and title fields
+            //That helps limit the amount of data sent and stored locally
+            $.get(ghost.url.api('posts', {limit: "all", fields: "slug,title"})).done(function(data) {
+                //add all the data returned to a variable
+                var searchData = data.posts; 
 
-            //New bloodhound to make it searchable
-            var search = new Bloodhound({
-              datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
-              queryTokenizer: Bloodhound.tokenizers.whitespace,
-              local: searchData
-            });
+                //New bloodhound to make it searchable
+                var search = new Bloodhound({
+                  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
+                  queryTokenizer: Bloodhound.tokenizers.whitespace,
+                  local: searchData
+                });
 
-            //Build the typeahead
-            $('#site-search .typeahead').typeahead({
-                hint: false,
-                highlight: true,
-                minLength: 1,
-                limit: 10
-            }, {
-                name: 'search',
-                //source is the bloodhound variable
-                source: search,
-                limit: 10,
-                templates: {
-                    empty: [
-                        '<div class="empty-message">',
-                        'unable to find any post that match the current query',
-                        '</div>'
-                    ].join('\n'),
-                    suggestion: function(data) {
-                        return '<p class="flex"><a href=/' + data.slug + '>' + data.title + '</a></p>';
+                //Build the typeahead
+                $('#site-search .typeahead').typeahead({
+                    hint: false,
+                    highlight: true,
+                    minLength: 1,
+                    limit: 10
+                }, {
+                    name: 'search',
+                    //source is the bloodhound variable
+                    source: search,
+                    limit: 10,
+                    templates: {
+                        empty: [
+                            '<div class="empty-message">',
+                            'unable to find any post that match the current query',
+                            '</div>'
+                        ].join('\n'),
+                        suggestion: function(data) {
+                            return '<p class="flex"><a href=/' + data.slug + '>' + data.title + '</a></p>';
+                        }
                     }
-                }
-            }); 
+                }); 
 
-            //Now show the search bar since getting data was successful
-            $('#site-search').show();
-        }).fail(function() {
-            //If the get request errors out, put an error in the console
-            console.log("Error getting Ghost API Data");
+                //Now show the search bar since getting data was successful
+                $('#site-search').show();
+            }).fail(function() {
+                //If the get request errors out, put an error in the console
+                console.log("Error getting Ghost API Data");
+            });
         });
     });
 </script>
