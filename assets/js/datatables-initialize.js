@@ -22,7 +22,7 @@ function datatableInitialize(tagPage) {
             //Save new data as the html variable
             json.posts[i].html = descSlice;
             //encode url into hidden div that then gets replaced on the init below
-            json.posts[i].image = "<a href='" + json.posts[i].url + "'><img src='" + encodeURI(json.posts[i].image) + "' /></a>";
+            json.posts[i].image = "<a href='" + json.posts[i].url + "'><img alt='Theme demo image' src='" + encodeURI(json.posts[i].image) + "' /></a>";
         }
     }).on('init.dt', function() {
         loadAllImages(indexDatatable);
