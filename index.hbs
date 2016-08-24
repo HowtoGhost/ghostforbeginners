@@ -14,7 +14,7 @@
                 {{#get "posts" limit="2" page="1" filter="tag:home-page-guide"}}
                     {{#foreach posts}}
                     <a href="/{{slug}}" class="home-popular-item flex flex-one">
-                        <img alt="Post Cover Image" class="home-popular-img" src="{{image}}">
+                        <img alt="Post Cover Image" class="home-post-img" src="{{image}}">
                         <div class="home-popular-desc flex-one">
                             <div class="home-popular-title">{{title}}</div>
                             <div class="home-popular-meta">{{meta_description}}</div>
@@ -27,7 +27,7 @@
                 {{#get "posts" limit="2" page="2" filter="tag:home-page-guide"}}
                     {{#foreach posts}}
                     <a href="/{{slug}}" class="home-popular-item flex flex-one">
-                        <img alt="Post Cover Image" class="home-popular-img" src="{{image}}">
+                        <img alt="Post Cover Image" class="home-post-img" src="{{image}}">
                         <div class="home-popular-desc flex-one">
                             <div class="home-popular-title">{{title}}</div>
                             <div class="home-popular-meta">{{meta_description}}</div>
@@ -40,7 +40,7 @@
                 {{#get "posts" limit="2" page="3" filter="tag:home-page-guide"}}
                     {{#foreach posts}}
                     <a href="/{{slug}}" class="home-popular-item flex flex-one">
-                        <img alt="Post Cover Image" class="home-popular-img" src="{{image}}">
+                        <img alt="Post Cover Image" class="home-post-img" src="{{image}}">
                         <div class="home-popular-desc flex-one">
                             <div class="home-popular-title">{{title}}</div>
                             <div class="home-popular-meta">{{meta_description}}</div>
@@ -74,9 +74,12 @@
         <div class="home-section flex home-articles-hosting">
             <div class="home-articles-container flex-vertical flex-one">
                 <h3 class="home-header">Recent Articles</h3>
-                {{#get "posts" limit="4" include="author,tags" filter="tags:beginners,tags:developers,tags:blog"}}
+                {{#get "posts" limit="5" include="author,tags" filter="tags:beginners,tags:developers,tags:blog"}}
                     {{#foreach posts}}
-                    <a href="/{{slug}}" class="home-recent-item flex-vertical flex-one">
+                    <a href="/{{slug}}" class="home-recent-item flex flex-one">
+                        {{#if image}}
+                        <img alt="Post Cover Image" class="home-post-img" src="{{image}}">
+                        {{/if}}
                         <div class="home-recent-desc">
                             <div class="home-recent-title">{{title}}</div>
                             <div class="home-recent-meta">{{meta_description}}</div>
@@ -85,24 +88,40 @@
                     {{/foreach}}
                 {{/get}}
             </div>
+        {{!-- </div> --}}
+
             <div class="vertical-hr"></div>
+        {{!-- <div class="home-section flex-vertical"> --}}
             <div class="home-hosting-container flex-vertical">
-                <h3 class="home-header home-hosting-header">The Best Ghost Hosting</h3>
+                <h3 class="home-header home-hosting-header">Best Place to Host Ghost</h3>
                 <div class="home-hosting-hosts">
                     <a href="/how-to-host-ghost-on-ghost-org" class="home-hosting-item flex-vertical flex-one">
                         <div class="home-hosting-img">
                             <img alt="Ghost Pro Logo" src="{{asset "images/GhostPro_logo.png"}}">
                         </div>
                         <div class="home-hosting-desc">
-                            <div class="home-hosting-meta">Host Ghost with the creaters themselves. Get amazing hosting and support the project at the same time!</div>
+                            <h5>Most Painless</h5>
+                            <div class="home-hosting-meta">By far the easiest place to host your Ghost blog. Takes only 30 seconds to get setup and all maintenance and updates are done by the Ghost team themselves. All you have to worry about is the writing. Plus, you can support the Ghost project directly.</div>
                         </div>
                     </a>
+                    <hr class="home-hr">
                     <a href="/how-to-install-ghost-on-digitalocean/" class="home-hosting-item flex-vertical flex-one">
                         <div class="home-hosting-img">
                             <img alt="DigitalOcean Logo" src="{{asset "images/DigitalOcean_logo.png"}}">
                         </div>
                         <div class="home-hosting-desc">
-                            <div class="home-hosting-meta">Host your Ghost blog where we do. Fast, cheap, flexible. Get $10 off by going through our link.</div>
+                            <h5>Most Flexible</h5>
+                            <div class="home-hosting-meta">This is where this site is hosted. DigitalOcean is fast and extremely reliable. With a one-click install of Ghost, you can get up and running in just 55 seconds. As a VPS, it will take some maintenance and tweaking by yourself. Get $10 of free credit by going through our link on the next page.</div>
+                        </div>
+                    </a>
+                    <hr class="home-hr">
+                    <a href="/how-to-install-ghost-on-a-small-orange/" class="home-hosting-item flex-vertical flex-one">
+                        <div class="home-hosting-img">
+                            <img alt="ASmallOrange Logo" src="{{asset "images/aso_logo.png"}}">
+                        </div>
+                        <div class="home-hosting-desc">
+                            <h5>Cheapest Pricing</h5>
+                            <div class="home-hosting-meta">ASmallOrange is the cheapest place we have seen to host Ghost. At only $3 a month, can host your blog reliably for extremely cheap. It is shared hosting, so the performance may not be that of DigitalOcean and the updates may not be as fast as Ghost(Pro), but a great place to host on a budget.</div>
                         </div>
                     </a>
                 </div>
