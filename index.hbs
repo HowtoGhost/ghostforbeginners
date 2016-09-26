@@ -14,7 +14,7 @@
                 {{#get "posts" limit="2" page="1" filter="tag:home-page-guide"}}
                     {{#foreach posts}}
                     <a href="/{{slug}}" class="home-popular-item flex flex-one">
-                        <img alt="Post Cover Image" class="home-post-img" src="{{image}}">
+                        <img alt="Post Cover Image" class="home-post-img" src="{{image}}?w=200">
                         <div class="home-popular-desc flex-one">
                             <div class="home-popular-title">{{title}}</div>
                             <div class="home-popular-meta">{{meta_description}}</div>
@@ -27,7 +27,7 @@
                 {{#get "posts" limit="2" page="2" filter="tag:home-page-guide"}}
                     {{#foreach posts}}
                     <a href="/{{slug}}" class="home-popular-item flex flex-one">
-                        <img alt="Post Cover Image" class="home-post-img" src="{{image}}">
+                        <img alt="Post Cover Image" class="home-post-img" src="{{image}}?w=200">
                         <div class="home-popular-desc flex-one">
                             <div class="home-popular-title">{{title}}</div>
                             <div class="home-popular-meta">{{meta_description}}</div>
@@ -40,7 +40,7 @@
                 {{#get "posts" limit="2" page="3" filter="tag:home-page-guide"}}
                     {{#foreach posts}}
                     <a href="/{{slug}}" class="home-popular-item flex flex-one">
-                        <img alt="Post Cover Image" class="home-post-img" src="{{image}}">
+                        <img alt="Post Cover Image" class="home-post-img" src="{{image}}?w=200">
                         <div class="home-popular-desc flex-one">
                             <div class="home-popular-title">{{title}}</div>
                             <div class="home-popular-meta">{{meta_description}}</div>
@@ -57,7 +57,7 @@
                 {{#foreach posts}}
                 <a href="/{{slug}}" class="home-theme-item flex-vertical flex-one">
                     {{#if image}}
-                    <img alt="Image of theme demo" class="home-theme-img" src="{{image}}">
+                    <img alt="Image of theme demo" class="home-theme-img" src="{{image}}?w=250">
                     {{else}}
                     <img alt="Image of theme demo" class="home-theme-img" src='//cdn.allghostthemes.com/assets/images/{{title}}.jpg'>
                     {{/if}}
@@ -78,7 +78,7 @@
                     {{#foreach posts}}
                     <a href="/{{slug}}" class="home-recent-item flex flex-one">
                         {{#if image}}
-                        <img alt="Post Cover Image" class="home-post-img" src="{{image}}">
+                        <img alt="Post Cover Image" class="home-post-img" src="{{image}}?w=200">
                         {{/if}}
                         <div class="home-recent-desc">
                             <div class="home-recent-title">{{title}}</div>
