@@ -10,7 +10,11 @@
                 {{#post}}
                 <div class="post-wrapper">
                     <div class="post-content">
-                        <h1 class="post-title">{{{title}}}</h1>
+                        {{#has tag="Theme"}}
+                            <h1 class="post-title">{{{title}}} Ghost Theme</h1>
+                        {{/else}}
+                            <h1 class="post-title">{{{title}}}</h1>
+                        {{/has}}
                         <section class="post-meta">
                             <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">Last Update on {{date format="DD MMMM YYYY"}}</time>
                             <div id="report-buttons-container" class="shareIcons">
