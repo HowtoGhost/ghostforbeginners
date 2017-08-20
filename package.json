@@ -1,4 +1,21 @@
 {
-  "name": "Ghost for Beginners",
-  "version": "1.0"
+    "name": "ghostforbeginners",
+    "description": "Theme for the Ghost for Beginners website.",
+    "demo": "https://www.ghostforbeginners.com",
+    "version": "2.0.0",
+    "engines": {
+        "ghost": ">=1.2.0"
+    },
+    "author": {
+        "name": "david balderston",
+        "email": "info@howtoinstallghost.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/HowtoGhost/ghostforbeginners.git"
+    },
+    "bugs": "https://github.com/HowtoGhost/ghostforbeginners/issues",
+    "config": {
+        "posts_per_page": 5
+    }
 }

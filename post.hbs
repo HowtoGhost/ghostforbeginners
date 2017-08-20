@@ -51,8 +51,8 @@
                         <hr class="post-title-hr">
                         {{#has tag="theme"}}
                         {{else}}
-                            {{#if image}}
-                                <img alt="Post cover image" class="post-img" src="{{image}}">
+                            {{#if feature_image}}
+                                <img alt="Post cover image" class="post-img" src="{{img_url feature_image}}">
                             {{/if}}
                         {{/has}}
                         {{content}}
@@ -77,22 +77,27 @@
                             <span class='st_email_large' displayText='Email'></span>
                         </div>
                         
-                        <a id="nodebb-comments"></a>
-                        <script type="text/javascript">
-                            var nbb = {};
-                            nbb.url = '//community.ghostforbeginners.com';
+                        <div id="disqus_thread"></div>
+                        <script>
 
-                            (function() {
-                                nbb.articleID = '{{../post.id}}'; nbb.title = '{{../post.title}}';
-                                nbb.tags = [{{#../post.tags}}"{{name}}",{{/../post.tags}}];
-                                nbb.script = document.createElement('script'); nbb.script.type = 'text/javascript'; nbb.script.async = true;
-                                nbb.script.src = nbb.url + '/plugins/nodebb-plugin-blog-comments/lib/ghost.js';
-                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(nbb.script);
-                                })();
+                        /**
+                        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                        
+                        var disqus_config = function () {
+                        // this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = "ghost-{{comment_id}}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        };
+                        
+                        (function() { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://ghostforbeginners.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                        })();
                         </script>
-                        <script id="nbb-markdown" type="text/markdown">{{{../post.markdown}}}</script>
-                        <noscript>Please enable JavaScript to view comments</noscript>
-                        <script async id="_ck_39049" src="https://forms.convertkit.com/39049?v=6"></script>
+                        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
                     </div>
                 </div>
             {{/post}}
