@@ -22,7 +22,7 @@ function datatableInitialize(tagPage) {
             //Save new data as the html variable
             json.posts[i].html = descSlice;
             //encode url into hidden div that then gets replaced on the init below
-            json.posts[i].image = "<a href='" + json.posts[i].url + "'><img alt='Theme demo image' src='" + encodeURI(json.posts[i].image) + "' /></a>";
+            json.posts[i].image = "<a href='" + json.posts[i].url + "'><img alt='Theme demo image' src='" + encodeURI(json.posts[i].feature_image) + "' /></a>";
         }
     }).on('init.dt', function() {
         loadAllImages(indexDatatable);
@@ -115,7 +115,7 @@ function loadAllImages(table) {
     table.api().rows().every(function(rowIdx, tableLoop, rowLoop) {
         var data = this.data();
         for (i; i < data.length; i++) {
-            $('.tableImage')[i].innerHTML = data.image;
+            $('.tableImage')[i].innerHTML = data.feature_image;
         }
 
     });
