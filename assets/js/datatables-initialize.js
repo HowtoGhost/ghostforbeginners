@@ -26,6 +26,7 @@ function datatableInitialize(tagPage) {
         }
     }).on('init.dt', function() {
         loadAllImages(indexDatatable);
+        promotePosts(indexDatatable);
     }).dataTable({
         ajax: {
             url: ghost.url.api('posts', {
@@ -73,6 +74,7 @@ function datatableInitialize(tagPage) {
             "class": "tdCenter"
         }],
         dom: 'Tl<"datatables-flex"i<"search-input"f>><"clear">rtp',
+        orderCellsTop: true,
         oLanguage: {
             "sInfo": "Number of Themes = _TOTAL_",
             "sInfoEmpty": "Number of Themes = _TOTAL_",
@@ -115,8 +117,57 @@ function loadAllImages(table) {
     table.api().rows().every(function(rowIdx, tableLoop, rowLoop) {
         var data = this.data();
         for (i; i < data.length; i++) {
+            console.log($('.tableImage')[i].innerHTML)
             $('.tableImage')[i].innerHTML = data.feature_image;
         }
 
+    });
+}
+
+function promotePosts(table) {
+
+    $.get(ghost.url.api('posts', { limit: "all", filter: "tag:promoted-theme" })).done(function(data) {
+        for (i = 0; i < data.posts.length; i++) {
+            // Get the index of matching row.  Assumes only one match
+            var indexes = table.api().rows().eq(0).filter(function(rowIdx) { //check column 0 of each row for tradeMsg.message.coin
+                return table.api().cell(rowIdx, 0).data().title === data.posts[i].title ? true : false;
+            });
+
+            // grab the data from the row
+            var rowData = table.api().row(indexes).data();
+
+            // console.log(data)
+
+            if (typeof(rowData) !== "undefined") {
+                console.log(rowData.title)
+                var header = $('.table-header').clone().appendTo('thead')
+                $(header).addClass('promoted').removeClass('table-header')
+                $(header).find('th').eq(0).html("<a href='" + rowData.custom_excerpt + "''>" + rowData.title + "</a>");
+                $(header).find('th').eq(1).html("<a href='" + rowData.custom_excerpt + "''><img src='" + rowData.feature_image + "' /></a>");
+                $(header).find('th').eq(2).html(function() {
+                    var tags_array = [];
+                    for (j = 0; j < rowData.tags.length; j++) {
+                        tags_array.push(rowData.tags[j].name);
+                    }
+                    tags_array.sort();
+                    return tags_array[0];
+                });
+
+                console.log(rowData.html)
+                $(header).find('th').eq(3).html(rowData.html);
+                $(header).find('th').eq(4).html(function() {
+                    var tags_array = [];
+                    for (j = 0; j < rowData.tags.length; j++) {
+                        tags_array.push(rowData.tags[j].name);
+                    }
+                    tags_array.sort();
+                    return String(tags_array[1]);
+                });
+
+                $('.promoted').show();
+            }
+        }
+    }).fail(function(err) {
+        console.log(err);
     });
 }
