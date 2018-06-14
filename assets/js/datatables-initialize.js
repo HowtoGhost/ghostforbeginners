@@ -126,7 +126,7 @@ function loadAllImages(table) {
 
 function promotePosts(table) {
 
-    $.get(ghost.url.api('posts', { limit: "all", filter: "tag:promoted-theme" })).done(function(data) {
+    $.get(ghost.url.api('posts', { limit: "all", filter: "tag:promoted-theme-list" })).done(function(data) {
         for (i = 0; i < data.posts.length; i++) {
             // Get the index of matching row.  Assumes only one match
             var indexes = table.api().rows().eq(0).filter(function(rowIdx) { //check column 0 of each row for tradeMsg.message.coin
