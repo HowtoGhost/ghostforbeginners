@@ -3,72 +3,74 @@
  */
 
 .dataTable {
-	margin: 0;
+    margin: 0;
 }
 
 .dataTables_filter {
-	flex: 1;
-	-webkit-flex: 1;
-	-ms-flex: 1 0 auto;
+    flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1 0 auto;
 }
 
 #indexTable_info {
-	padding-top: 0;
+    padding-top: 0;
 }
 
 .dataTables_wrapper {
-	position: relative;
+    position: relative;
 }
 
 .dataTables_scrollBody {
-	border-top: 1px solid #FF0000;
+    border-top: 1px solid #FF0000;
 }
 
-.sorting, .sorting_asc, .sorting_desc {
-	cursor: pointer;
+.sorting,
+.sorting_asc,
+.sorting_desc {
+    cursor: pointer;
 }
 
 .clear {
-	clear:both;
+    clear: both;
 }
 
 .search-input {
-	font-size: 16px;
-	float: none;
+    font-size: 16px;
+    float: none;
     align-self: center;
     -webkit-align-self: center;
 
-	input {
-		margin-left: 5px;
-		border-radius: 7px;
+    input {
+        margin-left: 5px;
+        border-radius: 7px;
 
-		&:focus {
-			outline: none;
-		}
-	}
+        &:focus {
+            outline: none;
+        }
+    }
 }
 
 tbody .tableImage {
-	width: 250px;
-	height: 100px;
-	text-align: center;
+    width: 250px;
+    height: 100px;
+    text-align: center;
 
-	p {
-		  background-color: gray;
-		  padding: 15px;
-		  border-radius: 20px;
-		  color: white;
-	}
-	a {
-		img {
-			max-width: 100%;
-			height: auto;
-		}
-	}
+    p {
+        background-color: gray;
+        padding: 15px;
+        border-radius: 20px;
+        color: white;
+    }
+    a {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
 }
 
 .dt-header {
-	font-size: 16px;
+    font-size: 16px;
 }
 
 .dataTables_scroll {
@@ -87,7 +89,7 @@ tbody .tableImage {
     white-space: nowrap;
 
     @media (max-width: 768px) {
-    	white-space: normal;
+        white-space: normal;
     }
 }
 
@@ -97,7 +99,7 @@ tbody .tableTitle {
     font-size: 18px;
 
     &:before {
-    	top: auto;
+        top: auto;
     }
 }
 
@@ -105,49 +107,55 @@ tbody .tableImage {
     width: 250px;
 }
 
-.tablePriceHeader, .tableColumnHeader{
+.tablePriceHeader,
+.tableColumnHeader {
     width: 5px;
 }
 
 .tdCenter {
-    text-align:center !important;
+    text-align: center !important;
 }
 
 #indexTable {
     border-collapse: collapse;
 
-    td, thead tr th {
-    	border: 1px solid #ddd;
-    	font-size: 16px;
-    	padding: 5px 18px;
+    td,
+    thead tr th {
+        border: 1px solid #ddd;
+        font-size: 16px;
+        padding: 5px 18px;
     }
 
     tbody tr td {
-    	vertical-align: middle;
+        vertical-align: middle;
+    }
+    thead .promoted th {
+    	// font-size: 14px;
+    	font-weight: 400;
     }
 }
 
 .datatables-flex {
-	display: flex;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	flex-wrap: wrap-reverse;
-	-webkit-flex-wrap: wrap-reverse;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-wrap: wrap-reverse;
+    -webkit-flex-wrap: wrap-reverse;
 
-	div {
-		min-width: 300px;
-		margin-bottom: 15px;
+    div {
+        min-width: 300px;
+        margin-bottom: 15px;
 
-		@media (max-width: 615px) {
-			width: 100%;
-		}
-	}
+        @media (max-width: 615px) {
+            width: 100%;
+        }
+    }
 }
 
 .dataTables_info {
-	flex: 1;
-	-webkit-flex: 1;
-	-ms-flex: 1 0 auto;
+    flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1 0 auto;
     font-size: 20px;
     font-weight: bold;
     float: none;
@@ -170,17 +178,16 @@ tbody .tableImage {
     margin-top: 12.5px;
 }
 
-.dowloadLink, .demoLink {
+.dowloadLink,
+.demoLink {
     color: #08c;
 }
 
 .control {
-	width: 10px;
+    width: 10px;
 }
 
 .promoted {
-	background-color: #FFFE93;
-	display: none;
-	font-size: 14px;
-	font-weight: 400;
+    background-color: #FFFE93;
+    display: none;
 }
