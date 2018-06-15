@@ -164,6 +164,7 @@ function promotePosts(table) {
                     return String(tags_array[1]);
                 });
 
+                $('.promoted th').removeClass('sorting sorting_asc');
                 $('.promoted').show();
             }
         }
